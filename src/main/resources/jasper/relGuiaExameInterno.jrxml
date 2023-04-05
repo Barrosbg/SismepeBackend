@@ -1,0 +1,1958 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.17.0.final using JasperReports Library version 6.17.0-6d93193241dd8cc42629e188b94f9e0bc5722efd  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="relLicencasPaciente" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ccb7b170-4707-4336-869e-7c233b80f2a9">
+	<property name="ireport.background.image.properties" value="false,true,0.25,0,0,0,0,0,0"/>
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="14"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Texts" fontName="DejaVu Sans" fontSize="12" isBold="true"/>
+	<parameter name="LOGO" class="java.net.URL" isForPrompting="false"/>
+	<parameter name="numeroGuia" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="dataAutorizacao" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="dataValidade" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="numeroGuiaOperadora" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="numeroCarteira" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="nomeBeneficiario" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="nomePrestadorSolicitante" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="conselho" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="numeroConselho" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="uf" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="dataSolicitacao" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="indicacaoClinica" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="procedimentoId1" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="procedimentoId2" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="procedimentoId3" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="procedimentoId4" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="procedimentoId5" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="procedimentoNome1" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="procedimentoNome2" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="procedimentoNome3" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="procedimentoNome4" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="procedimentoNome5" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="qtdSol1" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="qtdSol2" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="qtdSol3" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="qtdSol4" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="qtdSol5" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="qtdAut1" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="qtdAut2" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="qtdAut3" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="qtdAut4" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="qtdAut5" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="qtdRealizado1" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="qtdRealizado2" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="qtdRealizado3" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="qtdRealizado4" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="qtdRealizado5" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="procedimentoAutorizadoId1" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="procedimentoAutorizadoId2" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="procedimentoAutorizadoId3" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="procedimentoAutorizadoId4" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="procedimentoAutorizadoId5" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="procedimentoAutorizadoNome1" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="procedimentoAutorizadoNome2" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="procedimentoAutorizadoNome3" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="procedimentoAutorizadoNome4" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="procedimentoAutorizadoNome5" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="nomeContratante" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="cnpjContratante" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="procedimentoRealizadoId1" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="procedimentoRealizadoId2" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="procedimentoRealizadoId3" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="procedimentoRealizadoId4" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="procedimentoRealizadoId5" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="procedimentoRealizadoNome1" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="procedimentoRealizadoNome2" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="procedimentoRealizadoNome3" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="procedimentoRealizadoNome4" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="procedimentoRealizadoNome5" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="dtProcedimentoRealizado1" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="dtProcedimentoRealizado2" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="dtProcedimentoRealizado3" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="dtProcedimentoRealizado4" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="dtProcedimentoRealizado5" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="horaProcedimentoRealizado1" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="horaProcedimentoRealizado2" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="horaProcedimentoRealizado3" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="horaProcedimentoRealizado4" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="horaProcedimentoRealizado5" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="observacao" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="justificativa" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="caraterAtendimento" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="logradouroContratante" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="cidadeContratante" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="ufContratante" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="telefoneContratante" class="java.lang.String" isForPrompting="false"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="71" splitType="Stretch">
+			<image>
+				<reportElement x="12" y="7" width="108" height="53" uuid="a5241716-240a-4014-bb70-0a063e1bd5c2"/>
+				<imageExpression><![CDATA[$P{LOGO}]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="211" y="0" width="341" height="35" uuid="df01a007-ffc5-4ecf-87ad-5b5098e132b5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[GUIA DE SERVIÇO PROFISSIONAL / SERVIÇO AUXILIAR DE DIAGNÓSTICO E TERAPIA - SP/SADT]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="723" y="3" width="78" height="14" uuid="b0d179d9-75da-4e17-aa7a-488d426eb46d"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{numeroGuia}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="484" splitType="Stretch">
+			<rectangle>
+				<reportElement x="130" y="-30" width="91" height="19" uuid="e02d591e-2933-40de-b281-8d6840e89ce9"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="224" y="-30" width="146" height="19" uuid="a180c111-3344-46ac-a9ed-92d76e261ff3"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="373" y="-30" width="87" height="19" uuid="5e5344aa-fa4e-4d8c-a54c-fb013e08765e"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="462" y="-30" width="85" height="19" uuid="60b91a9d-7891-467e-8b6b-c5338d02abf9"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="549" y="-30" width="103" height="19" uuid="715270c6-6237-44f4-93ec-60be4d09b58e"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="654" y="-30" width="147" height="19" uuid="9b80fa75-67fa-4bfa-b811-5063012da488"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="0" y="-8" width="801" height="10" forecolor="rgba(255, 255, 255, 0.0)" backcolor="rgba(207, 207, 207, 0.98039216)" uuid="a8fe37bb-7b12-48b4-a12f-fcf80ff914e1"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="4" y="-10" width="273" height="14" forecolor="#030202" backcolor="#030303" uuid="0ce1cac7-4d41-4ad1-a14d-9c708bc47267"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Dados do Beneficiário]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="0" y="4" width="139" height="17" uuid="ef67d2ff-26c6-4896-8c93-683ec3a34d97"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="142" y="4" width="91" height="17" uuid="e7c86c83-d149-42f6-b849-b44b61900dea"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="236" y="4" width="273" height="17" uuid="1d70cc37-3815-48b2-8d41-90753e9cb29e"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="512" y="4" width="157" height="17" uuid="ebf3a8e7-4930-4472-9fd4-c72d60855655"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="672" y="4" width="129" height="17" uuid="09173dec-34e3-46d3-bf16-773bcd4f5cf9"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="0" y="24" width="801" height="10" forecolor="rgba(255, 255, 255, 0.0)" backcolor="rgba(207, 207, 207, 0.98039216)" uuid="31106c74-a6d5-4ac5-a8d5-d0c9373ff971"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="3" y="22" width="273" height="14" forecolor="#030202" backcolor="#030303" uuid="0134b865-11f6-4135-9270-8a35de6e8b4a"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Dados do Solicitante]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="0" y="37" width="129" height="19" uuid="35c42628-795d-4b0f-9009-0c795aaf8f5c"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="134" y="-30" width="61" height="9" forecolor="#030202" backcolor="#030303" uuid="693cfc36-044c-4bbf-813f-fbc7d59e7546"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[1 - Registro ANS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="229" y="-30" width="101" height="9" forecolor="#030202" backcolor="#030303" uuid="3f0f04b5-06c1-4486-aba5-3c9a8e553a25"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[3 - Número da Guia Principal]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="378" y="-30" width="82" height="9" forecolor="#030202" backcolor="#030303" uuid="ba28f03b-9ae5-494c-bbf3-ab9141709af0"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[4 - Data da autorização]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="467" y="-30" width="80" height="9" forecolor="#030202" backcolor="#030303" uuid="c695913d-96df-43ed-8905-b6ba92b26ca1"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[5 - Senha]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="552" y="-30" width="96" height="9" forecolor="#030202" backcolor="#030303" uuid="76412403-89c1-497c-9e11-0d405a09e6a0"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[6 - Data de Validade da Senha]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="658" y="-30" width="141" height="9" forecolor="#030202" backcolor="#030303" uuid="6f14d084-4ca6-45be-a582-217f063cd8a6"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[7 - Número da Guia Atribuído pela Operadora]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="4" y="4" width="86" height="8" forecolor="#030202" backcolor="#030303" uuid="92768222-9632-47bd-8de9-984668cb1880"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[8 - Número da Carteira]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="147" y="4" width="78" height="8" forecolor="#030202" backcolor="#030303" uuid="28acc08f-818b-4f0f-906d-03c32916a859"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[9 - Validade da Carteira]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="240" y="4" width="78" height="8" forecolor="#030202" backcolor="#030303" uuid="d2ab4be2-5720-4e9d-9345-8791505ee01c"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[10 - Nome]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="518" y="4" width="134" height="8" forecolor="#030202" backcolor="#030303" uuid="09cdc137-a660-4c60-a38c-12ffc0d43ca3"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[11 - Cartão Nacional de Saúde]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="678" y="4" width="112" height="8" forecolor="#030202" backcolor="#030303" uuid="01c71d3a-6a13-4643-80c2-ce9feb7283ea"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[12 - Atendimento a RN]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="132" y="37" width="669" height="19" uuid="1cf43111-f9ec-4d45-819d-9e2f8e03f732"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="4" y="38" width="86" height="8" forecolor="#030202" backcolor="#030303" uuid="bdf44dea-b3dc-4dee-aab5-e4a86587ae25"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[13 - Código na Operadora]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="137" y="38" width="86" height="8" forecolor="#030202" backcolor="#030303" uuid="cde56fcd-b8bf-4734-9e74-0cdf601b7454"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[14 - Nome do Contratado]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="0" y="58" width="269" height="17" uuid="54fa63a9-5261-468d-abe9-216b662e3697"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="272" y="58" width="91" height="17" uuid="abdc1171-154b-4ed6-90c4-cc5754488370"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="366" y="58" width="91" height="17" uuid="e00555c4-7937-4183-b045-56795a776736"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="460" y="58" width="39" height="17" uuid="06efc473-4bd4-414d-832a-e48a5b56529b"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="502" y="58" width="77" height="17" uuid="696c38b0-408f-41a8-ad0f-6a6cb3e361fb"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="582" y="58" width="219" height="17" uuid="a9cb28cc-5b8c-47bd-b19b-fa287f2b60e6"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="4" y="58" width="132" height="8" forecolor="#030202" backcolor="#030303" uuid="be0d7bc0-a185-46bb-9cde-4a3c765aea4d"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[15 - Nome do Profissional Solicitante]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="277" y="58" width="85" height="8" forecolor="#030202" backcolor="#030303" uuid="7ee2be1d-ad09-48f6-8380-924a1e277d37"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[16 - Conselho Profissional]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="371" y="58" width="86" height="8" forecolor="#030202" backcolor="#030303" uuid="18c19d87-9a47-4975-b618-d0298ded028b"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[17 - Número do Conselho]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="465" y="58" width="32" height="8" forecolor="#030202" backcolor="#030303" uuid="d662f533-2b82-476a-bc45-f69781277231"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[18 - UF]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="509" y="58" width="70" height="8" forecolor="#030202" backcolor="#030303" uuid="7082517c-cdf2-4371-892e-da19d0b065f6"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[19 - Código CBO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="590" y="58" width="190" height="8" forecolor="#030202" backcolor="#030303" uuid="c12b13d0-f3ba-4618-ab24-14c6bab35e35"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[20 - Assinatura do Profissional Solicitante]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="0" y="78" width="801" height="10" forecolor="rgba(255, 255, 255, 0.0)" backcolor="rgba(207, 207, 207, 0.98039216)" uuid="d6bf0097-f86e-479c-aeb6-49c1046eb514"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="3" y="42" width="363" height="4" forecolor="#030202" backcolor="#030303" uuid="12e3d6a5-89b3-487b-9cdb-007d14fe509f"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="8" isBold="false"/>
+				</textElement>
+			</staticText>
+			<rectangle>
+				<reportElement x="0" y="90" width="98" height="17" uuid="89ca653b-ecb4-4830-abaa-900cd8a76786"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="5" y="90" width="93" height="9" forecolor="#030202" backcolor="#030303" uuid="3c0d6c15-e61f-45e6-82ed-6c6bceba2a8c"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[21 - Caráter do Atendimento]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="100" y="90" width="123" height="17" uuid="c714e386-d258-4861-a7cb-4eead7d4624c"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="106" y="90" width="111" height="9" forecolor="#030202" backcolor="#030303" uuid="adb78314-a71e-4b29-a322-54a0cf0f0896"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[22 - Data da Solicitação]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="225" y="90" width="576" height="17" uuid="522b4004-adbe-45f9-b934-8289df79acd7"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="229" y="90" width="532" height="9" forecolor="#030202" backcolor="#030303" uuid="4932ba95-7cb8-4548-b4fa-889caf9b2189"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[23 - Indicação Clínica]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="0" y="110" width="801" height="67" uuid="5f1dfff2-aed6-437e-ac77-a6de4c4b2e80"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="5" y="109" width="64" height="11" forecolor="#030202" backcolor="#030303" uuid="62764d91-3189-4b8c-9ead-831efd9e5619"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[24 - Tabela]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="82" y="109" width="106" height="11" forecolor="#030202" backcolor="#030303" uuid="93483412-4759-458d-bb14-78aa1dc64813"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[25 - Código do Procedimento]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="202" y="109" width="106" height="11" forecolor="#030202" backcolor="#030303" uuid="bd9b285b-0be3-4d5f-9609-88ae14774b46"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[26 - Descrição]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="685" y="109" width="57" height="11" forecolor="#030202" backcolor="#030303" uuid="6cb5d8fb-5465-4583-a43a-78752044d7b3"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[27 - Qtde. Solic.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="747" y="109" width="48" height="11" forecolor="#030202" backcolor="#030303" uuid="b45a6be1-e7dd-4707-a6b7-93c2c54993f3"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[28 - Qtde. Aut.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="5" y="132" width="64" height="10" forecolor="#030202" backcolor="#030303" uuid="0d8248b6-ebda-483a-9889-cb314c7c69dc"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[2 - ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="5" y="122" width="64" height="10" forecolor="#030202" backcolor="#030303" uuid="155b07ef-552d-4185-beac-ce71bed8dec3"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[1 - ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="5" y="142" width="64" height="10" forecolor="#030202" backcolor="#030303" uuid="4625886a-5f47-4b2c-a3ac-b116fde250d4"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[3 - ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="5" y="152" width="64" height="10" forecolor="#030202" backcolor="#030303" uuid="cf8cabf4-8684-41c8-a7bc-8215cdaf8b7c"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[4 - ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="5" y="162" width="64" height="10" forecolor="#030202" backcolor="#030303" uuid="6ef8368c-467a-4c29-b88e-c6b1f03bdd27"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[5 - ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="649" y="-68" width="72" height="14" forecolor="#030202" backcolor="#030303" uuid="9ffd10dd-7695-43ea-8dc5-30885ac750bb"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[2 - Nº Guia no Prestador]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="229" y="-22" width="137" height="10" uuid="6f5ff589-ec2a-4c72-8bac-c8a3bd712daa"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{numeroGuia}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="378" y="-22" width="79" height="10" uuid="f64754bd-9637-464f-94ee-ba95b86f767f"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{dataAutorizacao}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="467" y="-21" width="74" height="9" uuid="7735c36d-a023-4f85-917c-ca8007ba5318"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{numeroGuia}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="552" y="-22" width="96" height="10" uuid="22b47d18-10b6-4d7f-b522-4371ce55d620"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{dataValidade}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="658" y="-21" width="137" height="9" uuid="1c5719b3-1f53-4e70-ba79-76fa939b2d2e"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{numeroGuiaOperadora}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="240" y="11" width="262" height="10" uuid="b9bd009b-7f4b-4244-a20f-4aaa7f8a88f2"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{nomeBeneficiario}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="137" y="45" width="658" height="10" uuid="b4c50af1-6a7f-4146-a979-348b8eb0d65c"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{nomePrestadorSolicitante}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="4" y="65" width="256" height="9" uuid="fd0fda39-6ae1-4166-97d5-ddf88cb6817c"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{nomePrestadorSolicitante}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="277" y="65" width="82" height="9" uuid="130b0de8-8f45-4d1d-8ac3-f684330f7bfa"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{conselho}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="370" y="65" width="82" height="9" uuid="bec3cf59-22a9-4c70-8c0b-02d8e102c86c"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{numeroConselho}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="465" y="65" width="32" height="9" uuid="13800265-2d6a-41db-b343-4dca10a38563"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{uf}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="106" y="96" width="113" height="11" uuid="c0491278-4934-4f97-88e6-62d4b0b5ce23"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{dataSolicitacao}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="229" y="96" width="566" height="11" uuid="59a3f5d1-a905-4bbd-853b-ce48f8218818"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{indicacaoClinica}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="5" y="11" width="124" height="10" uuid="ccdf4b62-9817-4604-87df-7223a8625efd"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{numeroCarteira}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="82" y="122" width="106" height="10" uuid="684793ef-cd4b-419b-950c-77fc1e9fd852"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{procedimentoId1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="82" y="132" width="106" height="10" uuid="79aa870f-c08b-4ed4-af4c-14aa9cbca94b"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{procedimentoId2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="82" y="142" width="106" height="10" uuid="4cd380b3-98c8-42cf-9757-8a335eab103f"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{procedimentoId3}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="82" y="152" width="106" height="10" uuid="cc0a71d6-622a-45f7-87d2-9fbc191c54e0"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{procedimentoId4}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="82" y="162" width="106" height="10" uuid="a7855509-dce0-40e2-9247-c715d3cb68da"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{procedimentoId5}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="202" y="122" width="476" height="10" uuid="c98f2bde-3dc6-4891-b82c-68321b10104f"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{procedimentoNome1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="202" y="132" width="476" height="10" uuid="00d8ada4-d69e-468e-9562-7a2669adaf45"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{procedimentoNome2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="202" y="142" width="476" height="10" uuid="1d038203-4eb8-4b8b-a483-6b6d8cd405f8"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{procedimentoNome3}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="202" y="152" width="476" height="10" uuid="d7c661d1-1ce2-4184-b4b4-d1a0d488903e"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{procedimentoNome4}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="202" y="162" width="476" height="10" uuid="38a63696-00af-42eb-acf5-aaf50cea603d"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{procedimentoNome5}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="0" y="180" width="801" height="10" forecolor="rgba(255, 255, 255, 0.0)" backcolor="rgba(207, 207, 207, 0.98039216)" uuid="580a5b29-bc81-48c5-95fe-11529dde7e30"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="3" y="178" width="363" height="14" forecolor="#030202" backcolor="#030303" uuid="84150f1c-710c-4d8e-9e3d-8785687fbf37"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Dados do Contratrante Executante]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="132" y="193" width="218" height="21" uuid="a8041df7-000b-4417-b27e-a434648e97e6"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="137" y="193" width="86" height="12" forecolor="#030202" backcolor="#030303" uuid="7f898221-8865-46e1-a231-1c6eb16f19e6"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[30 - Nome do Contratado]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="1" y="217" width="801" height="10" forecolor="rgba(255, 255, 255, 0.0)" backcolor="rgba(207, 207, 207, 0.98039216)" uuid="c2af843e-73f7-415f-8ea6-c8470fa4c844"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="5" y="215" width="363" height="14" forecolor="#030202" backcolor="#030303" uuid="c32ce466-a1f3-471f-930c-c93ad34c145c"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Procedimentos e Exames Realizados]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="0" y="193" width="129" height="21" uuid="ba2698bf-46ab-4bd5-a9c8-4d4b73d3256a"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="1" y="229" width="801" height="53" uuid="fb81bb4c-20fd-4160-9f37-d24e71fb30f6"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="5" y="231" width="55" height="9" forecolor="#030202" backcolor="#030303" uuid="b68ce7de-b633-44bc-9a1a-66d922ef8865"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[36 - Data]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="65" y="231" width="50" height="9" forecolor="#030202" backcolor="#030303" uuid="587e7b65-a5ea-414a-9be6-01fc8421d289"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[37 - Hora inicial]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="120" y="231" width="47" height="9" forecolor="#030202" backcolor="#030303" uuid="c896598e-7fb5-429d-8b66-fa67ab4fc067"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[38 - Hora final]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="173" y="231" width="36" height="9" forecolor="#030202" backcolor="#030303" uuid="127679c1-0c5a-44f5-b20c-02fec4108cb4"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[39 - Tabela]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="217" y="231" width="80" height="9" forecolor="#030202" backcolor="#030303" uuid="8cf32931-a7e4-4351-a474-a1e8dab0cff9"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[40 - Código do Procedimento]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="306" y="231" width="187" height="9" forecolor="#030202" backcolor="#030303" uuid="de5748ad-3110-4dc2-9ccc-3551f54b247d"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[41 - Descrição]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="5" y="242" width="55" height="8" forecolor="#030202" backcolor="#030303" uuid="3e1c2e7c-edef-46c9-bca6-be6ddccedaf6"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[1 - ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="5" y="250" width="55" height="8" forecolor="#030202" backcolor="#030303" uuid="5bbbf9af-8295-4b34-8cac-b1df0beafcc1"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[2 - ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="5" y="258" width="55" height="8" forecolor="#030202" backcolor="#030303" uuid="795da87b-4c6b-4bb6-a31b-b06fe190b8c0"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[3 - ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="5" y="266" width="55" height="8" forecolor="#030202" backcolor="#030303" uuid="c82fbaab-e331-42ff-9fdf-bcf77709024c"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[4 - ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="5" y="274" width="55" height="8" forecolor="#030202" backcolor="#030303" uuid="c799f1d4-7a76-4f96-ae86-aff8720b24a4"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[5 - ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="217" y="242" width="80" height="8" uuid="7b6b3c81-3b61-4051-a55a-6c0d8f323a96"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{procedimentoRealizadoId1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="217" y="250" width="80" height="8" uuid="29066f9a-446a-435d-ac98-5ca04f47b267"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{procedimentoRealizadoId2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="217" y="258" width="80" height="8" uuid="0b7c8b1a-55cf-4b85-b15b-935f524b95ff"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{procedimentoRealizadoId3}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="217" y="266" width="80" height="8" uuid="131b4fbd-c75a-493f-b787-26dd9c42903b"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{procedimentoRealizadoId4}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="217" y="274" width="80" height="8" uuid="67baba85-3ae8-4d08-bd2c-13a2ae79dbd3"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{procedimentoRealizadoId5}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="306" y="242" width="187" height="8" uuid="85fe98f9-fed4-40db-b29d-42a7f8a47b90"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{procedimentoRealizadoNome1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="306" y="250" width="187" height="8" uuid="0fca26af-5a36-4ee8-890f-b5dc181f37bc"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{procedimentoRealizadoNome2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="306" y="258" width="187" height="8" uuid="c623fa33-adca-4d6d-a23b-434d90c26eb2"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{procedimentoRealizadoNome3}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="306" y="266" width="187" height="8" uuid="36a69f08-2ec0-43df-bb20-a58419b5e579"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{procedimentoRealizadoNome4}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="306" y="274" width="187" height="8" uuid="bac04fd2-ad15-46e4-8363-20c696ab59b7"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{procedimentoRealizadoNome5}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="5" y="204" width="116" height="10" uuid="2a1337ef-61b3-487b-990f-7cc681711d6f"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{cnpjContratante}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="137" y="203" width="213" height="10" uuid="a5bc0b05-5374-4e5a-8ca3-c061bc9a5917"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{nomeContratante}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="5" y="193" width="116" height="13" forecolor="#030202" backcolor="#030303" uuid="3fb0eec6-7400-4712-a46c-c0413c0ab7b7"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[29 - Código na Operadora]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="4" y="76" width="273" height="14" forecolor="#030202" backcolor="#030303" uuid="6da3a13b-e1bc-4de2-976a-7b83df23cc76"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Dados da Solicitação / Procedimento ou Itens Assistenciais Solicitados]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="1" y="285" width="801" height="10" forecolor="rgba(255, 255, 255, 0.0)" backcolor="rgba(207, 207, 207, 0.98039216)" uuid="0b6ab4f0-0976-4d58-b3fa-2282ffbd364d"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="6" y="283" width="363" height="14" forecolor="#030202" backcolor="#030303" uuid="1c78f028-0ae7-4868-8077-8c1dfbb0c384"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Identificação do(s) Profissional(is) Executante(s)]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="1" y="298" width="801" height="62" uuid="a62f1fd8-9af3-47fc-b827-50b71a6c3a8c"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="6" y="299" width="64" height="9" forecolor="#030202" backcolor="#030303" uuid="9876ee84-1433-4f90-8566-a7a35dcb1afc"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[48 - Seq.Ref]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="78" y="299" width="64" height="9" forecolor="#030202" backcolor="#030303" uuid="0e8e203e-47b8-4bbe-bef8-de0069134e9b"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[49 - Grau Part.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="150" y="299" width="126" height="9" forecolor="#030202" backcolor="#030303" uuid="fe426b91-f223-4466-89f3-ff823e5ed345"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[50 - Código da Operadora/CPF]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="290" y="299" width="126" height="9" forecolor="#030202" backcolor="#030303" uuid="20b6035a-0780-4fc9-80c5-2bdddfa10b25"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[51 - Nome do Profissional]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="430" y="299" width="82" height="9" forecolor="#030202" backcolor="#030303" uuid="60d9d27e-4fe3-4830-a7b4-8ba4f4771af6"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[52 - Conselho Profissional]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="527" y="299" width="102" height="9" forecolor="#030202" backcolor="#030303" uuid="46f426d6-8587-4b47-8f9f-c8d205073f0c"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[53 - Número do Conselho]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="642" y="299" width="36" height="9" forecolor="#030202" backcolor="#030303" uuid="1b966343-7bf6-4c8b-988f-957589a985ec"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[54 -UF]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="697" y="299" width="98" height="9" forecolor="#030202" backcolor="#030303" uuid="aef454a3-1144-4298-b8b1-224693237a16"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[55 - Código CBO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="697" y="312" width="98" height="9" forecolor="#030202" backcolor="#030303" uuid="82a7d79b-5102-4e88-ae7e-a09eadafc9b8"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[|__|__|__|__|__|__|__|__|__|__|__|]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="6" y="312" width="64" height="9" forecolor="#030202" backcolor="#030303" uuid="2c0479fb-c425-4331-accc-52eb78036222"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[|__|__|]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="78" y="312" width="64" height="9" forecolor="#030202" backcolor="#030303" uuid="10cce9b5-5c94-434e-9dba-06bb646b14ac"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[|__|__|]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="150" y="312" width="126" height="9" forecolor="#030202" backcolor="#030303" uuid="cebc00b3-2418-4cbb-94ff-f5e08e8f4949"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[|__|__|__|__|__|__|__|__|__|__|__|__|__|__|__|]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="290" y="312" width="126" height="9" forecolor="#030202" backcolor="#030303" uuid="6c6a2d1f-1f03-4305-ab32-e53db06ab70a"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[______________________________________]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="430" y="312" width="82" height="9" forecolor="#030202" backcolor="#030303" uuid="0655074a-992a-4c09-b928-71e28e4d5aad"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[|__|__|]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="527" y="312" width="102" height="9" forecolor="#030202" backcolor="#030303" uuid="1a6e1794-0010-474c-ac43-758a0f13af02"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[|__|__|__|__|__|__|__|__|__|__|__|__|]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="642" y="312" width="36" height="9" forecolor="#030202" backcolor="#030303" uuid="669b52cb-9605-4e6e-b7d3-b789257ad532"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[|__|__|]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="697" y="323" width="98" height="9" forecolor="#030202" backcolor="#030303" uuid="81805be3-4ef0-4c0d-8c2f-e5e61aadd7c1"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[|__|__|__|__|__|__|__|__|__|__|__|]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="642" y="323" width="36" height="9" forecolor="#030202" backcolor="#030303" uuid="6ac60ac6-7072-4cf5-991c-0cb5917356ca"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[|__|__|]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="527" y="323" width="102" height="9" forecolor="#030202" backcolor="#030303" uuid="e4192a0b-09f5-4d4d-8240-14ee6c5a5a33"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[|__|__|__|__|__|__|__|__|__|__|__|__|]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="430" y="323" width="82" height="9" forecolor="#030202" backcolor="#030303" uuid="18dad833-63fc-409e-9a58-51c8e4460525"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[|__|__|]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="290" y="323" width="126" height="9" forecolor="#030202" backcolor="#030303" uuid="227bf061-7025-48f0-9e16-18a772cf466e"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[______________________________________]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="150" y="323" width="126" height="9" forecolor="#030202" backcolor="#030303" uuid="89149cb2-0a5c-4832-b793-e0c892311bae"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[|__|__|__|__|__|__|__|__|__|__|__|__|__|__|__|]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="78" y="323" width="64" height="9" forecolor="#030202" backcolor="#030303" uuid="4e0c8526-cc00-4662-88f0-a0b67394570f"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[|__|__|]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="6" y="323" width="64" height="9" forecolor="#030202" backcolor="#030303" uuid="a258b26a-c69a-471a-9354-93dc4f2cfeb8"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[|__|__|]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="697" y="334" width="98" height="9" forecolor="#030202" backcolor="#030303" uuid="ff8becf9-61e2-4629-904d-84ab68456fdb"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[|__|__|__|__|__|__|__|__|__|__|__|]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="642" y="334" width="36" height="9" forecolor="#030202" backcolor="#030303" uuid="d3937d04-401a-4f14-aafc-e5b1183e152b"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[|__|__|]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="527" y="334" width="102" height="9" forecolor="#030202" backcolor="#030303" uuid="761634b0-5b17-4da2-ac65-ec11b89eb27b"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[|__|__|__|__|__|__|__|__|__|__|__|__|]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="430" y="334" width="82" height="9" forecolor="#030202" backcolor="#030303" uuid="d379cceb-ed20-4eb2-8f81-eb6b7600f6fe"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[|__|__|]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="290" y="334" width="126" height="9" forecolor="#030202" backcolor="#030303" uuid="67ba9fc8-b08a-4240-866f-2310c360ba1c"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[______________________________________]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="150" y="334" width="126" height="9" forecolor="#030202" backcolor="#030303" uuid="d622d63b-a265-45b3-b0dc-147d237543f1"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[|__|__|__|__|__|__|__|__|__|__|__|__|__|__|__|]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="78" y="334" width="64" height="9" forecolor="#030202" backcolor="#030303" uuid="11e74280-c7d2-42f2-b464-d6e1f3a3664f"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[|__|__|]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="6" y="334" width="64" height="9" forecolor="#030202" backcolor="#030303" uuid="dab0e124-c8fe-4ed1-b52f-e7ef669db7ea"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[|__|__|]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="697" y="345" width="98" height="9" forecolor="#030202" backcolor="#030303" uuid="2f5c9920-1825-4c51-b31f-9494501f207a"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[|__|__|__|__|__|__|__|__|__|__|__|]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="642" y="345" width="36" height="9" forecolor="#030202" backcolor="#030303" uuid="3eee4798-9fd1-4e11-8dc8-becc11e4f453"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[|__|__|]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="527" y="345" width="102" height="9" forecolor="#030202" backcolor="#030303" uuid="765aa1dc-9677-48c3-8155-8089207d2a64"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[|__|__|__|__|__|__|__|__|__|__|__|__|]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="430" y="345" width="82" height="9" forecolor="#030202" backcolor="#030303" uuid="e08f3535-ccec-40e8-aa32-0ac25b55cb3d"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[|__|__|]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="290" y="345" width="126" height="9" forecolor="#030202" backcolor="#030303" uuid="e1fb4202-6834-412f-9150-86902a2a3f4d"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[______________________________________]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="150" y="345" width="126" height="9" forecolor="#030202" backcolor="#030303" uuid="aeb846f1-fbf1-4bfa-9160-6ffd261ddc4a"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[|__|__|__|__|__|__|__|__|__|__|__|__|__|__|__|]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="78" y="345" width="64" height="9" forecolor="#030202" backcolor="#030303" uuid="0b273d9f-6fa7-4d56-96ba-0d7af049399e"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[|__|__|]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="6" y="345" width="64" height="9" forecolor="#030202" backcolor="#030303" uuid="e4dddc9e-7765-4005-95bf-d592cdde03aa"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[|__|__|]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="685" y="122" width="57" height="10" uuid="7864c515-fe4e-44e6-9fbb-2624a28c3d83"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{qtdSol1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="685" y="132" width="57" height="10" uuid="a0bfdc50-0718-404a-b154-4d87db9fed37"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{qtdSol2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="685" y="142" width="57" height="10" uuid="dccd590a-ac0f-4aaa-884e-e9f548f43ebb"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{qtdSol3}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="685" y="152" width="57" height="10" uuid="b15a5ba8-c9af-47f9-aa99-306a2f146d91"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{qtdSol4}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="685" y="162" width="57" height="10" uuid="343c6ddc-1690-4ce1-bb6f-efda4f451d22"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{qtdSol5}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="747" y="162" width="48" height="10" uuid="e2ee63dc-9167-4df1-92aa-4a441c42b56b"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{qtdAut5}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="747" y="152" width="48" height="10" uuid="bf6fee4a-f0de-4258-876d-93b4ecc80b93"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{qtdAut4}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="747" y="142" width="48" height="10" uuid="6c1f283c-8584-4a51-a714-7140012c982e"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{qtdAut3}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="747" y="132" width="48" height="10" uuid="1a611927-e1c6-4b13-95e1-d9641cbe9bbb"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{qtdAut2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="747" y="122" width="48" height="10" uuid="097ed6ec-84e4-44da-90f8-4feae2b1da0a"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{qtdAut1}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="500" y="231" width="35" height="8" forecolor="#030202" backcolor="#030303" uuid="248eeb82-024b-4533-b0fd-62dc522106bf"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[42 - Qtde.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="540" y="231" width="28" height="8" forecolor="#030202" backcolor="#030303" uuid="729b4c3b-717c-40d5-9818-ef94c3a4d463"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[43 - Via]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="575" y="231" width="30" height="8" forecolor="#030202" backcolor="#030303" uuid="655c45ad-f269-4897-b168-5eb43381b4c7"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[44 - Téc.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="610" y="231" width="59" height="8" forecolor="#030202" backcolor="#030303" uuid="725c275b-0484-40b5-9c41-bc375d3eace1"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[45 - Fator Red./Ac.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="672" y="231" width="67" height="8" forecolor="#030202" backcolor="#030303" uuid="429de377-890e-4fc5-988b-16f56e86d7cf"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[46 - Valor Unitário-R$]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="742" y="231" width="57" height="8" forecolor="#030202" backcolor="#030303" uuid="20feb338-b80a-48b0-a57d-1b15d3758afe"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[47 - Valor Total-R$]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="575" y="242" width="30" height="8" forecolor="#030202" backcolor="#030303" uuid="ded9d29d-d8e0-4dcc-aa2c-b4306459b901"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[N]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="610" y="242" width="59" height="8" forecolor="#030202" backcolor="#030303" uuid="6a422fbf-697d-4684-8b4b-cbbbaec1254c"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[|__|__|__|,|__|__|]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="672" y="242" width="67" height="8" forecolor="#030202" backcolor="#030303" uuid="d67ae8a6-960d-44ad-be81-da3cd81b2e2c"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[|__|__|__|__|,|__|__|]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="742" y="242" width="57" height="8" forecolor="#030202" backcolor="#030303" uuid="e16026d5-ab20-4fda-b1b9-8e7390fadf32"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[|__|__|__|__|,|__|__|]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="575" y="250" width="30" height="8" forecolor="#030202" backcolor="#030303" uuid="cb9bf697-4a39-45ac-92b7-0a36239d1aec"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[N]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="575" y="258" width="30" height="8" forecolor="#030202" backcolor="#030303" uuid="f1b36531-6f16-4621-9c4b-af9d27645c74"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[N]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="575" y="266" width="30" height="8" forecolor="#030202" backcolor="#030303" uuid="2dcf970b-f53b-4010-91f6-139f66abcde6"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[N]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="575" y="274" width="30" height="8" forecolor="#030202" backcolor="#030303" uuid="ae419acc-b2cc-43ce-beca-2e4b909c9d78"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[N]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="610" y="250" width="59" height="8" forecolor="#030202" backcolor="#030303" uuid="ce5ce3da-5718-44a5-9845-518723d8c834"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[|__|__|__|,|__|__|]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="610" y="258" width="59" height="8" forecolor="#030202" backcolor="#030303" uuid="c7cb5fe5-42e5-4264-8584-70904c594f61"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[|__|__|__|,|__|__|]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="610" y="266" width="59" height="8" forecolor="#030202" backcolor="#030303" uuid="39b7f166-1d74-44ac-957e-54e3d4ead23d"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[|__|__|__|,|__|__|]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="610" y="274" width="59" height="8" forecolor="#030202" backcolor="#030303" uuid="47b05e13-164c-4736-adf7-b0b1758ffbaa"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[|__|__|__|,|__|__|]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="672" y="250" width="67" height="8" forecolor="#030202" backcolor="#030303" uuid="7d1b78ac-baef-4277-a2c0-bf25b20066c8"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[|__|__|__|__|,|__|__|]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="672" y="258" width="67" height="8" forecolor="#030202" backcolor="#030303" uuid="9a7f5c6c-e12c-4167-b4ea-8c3c0c9cbb10"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[|__|__|__|__|,|__|__|]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="672" y="266" width="67" height="8" forecolor="#030202" backcolor="#030303" uuid="bf85a789-7c43-4243-b8a5-a9f7af21bb9c"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[|__|__|__|__|,|__|__|]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="672" y="274" width="67" height="8" forecolor="#030202" backcolor="#030303" uuid="9ff108c7-f4bf-4ac5-9d00-4e338a091572"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[|__|__|__|__|,|__|__|]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="742" y="250" width="57" height="8" forecolor="#030202" backcolor="#030303" uuid="e3a2da56-568f-42f8-abe8-a2485563f907"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[|__|__|__|__|,|__|__|]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="742" y="258" width="57" height="8" forecolor="#030202" backcolor="#030303" uuid="58415ac4-3a93-4f17-85a9-33c007cc12e4"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[|__|__|__|__|,|__|__|]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="742" y="266" width="57" height="8" forecolor="#030202" backcolor="#030303" uuid="26aedbad-40b9-4a4c-952f-1cec44880106"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[|__|__|__|__|,|__|__|]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="742" y="274" width="57" height="8" forecolor="#030202" backcolor="#030303" uuid="d0c9f95b-20a7-4035-8314-2bb2ddb7a6d1"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[|__|__|__|__|,|__|__|]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="1" y="364" width="801" height="28" uuid="8cc65da8-15af-4a65-bcd5-a91d0e252412"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="17" y="374" width="115" height="9" forecolor="#030202" backcolor="#030303" uuid="44bc5b34-3c9c-45df-b60a-48ddd4a9faf4"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[|__|__|//|__|__|/|__|__| ______________ |]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="6" y="364" width="144" height="9" forecolor="#030202" backcolor="#030303" uuid="4f9f8232-0494-497c-8aff-18baef3327a6"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[56 - Data de Realização de Procedimentos em Série]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="162" y="364" width="154" height="9" forecolor="#030202" backcolor="#030303" uuid="af0c0281-832a-4b4a-9637-a286a0af968c"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[56 - Assinatura do Beneficiário ou Responsável]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="5" y="374" width="12" height="9" forecolor="#030202" backcolor="#030303" uuid="9928d6e5-ecdc-4aa6-8f06-0e4f41740996"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[1-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="5" y="383" width="12" height="9" forecolor="#030202" backcolor="#030303" uuid="e0b3fe23-f950-47c1-81ad-091171f16a81"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[2-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="17" y="383" width="115" height="9" forecolor="#030202" backcolor="#030303" uuid="2c60852f-f6f3-4685-ad5a-c4134743728e"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[|__|__|//|__|__|/|__|__| ______________ |]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="133" y="374" width="12" height="9" forecolor="#030202" backcolor="#030303" uuid="08fe2846-4262-4302-8bda-946df434c838"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[3-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="133" y="383" width="12" height="9" forecolor="#030202" backcolor="#030303" uuid="21db077a-9eb1-4e50-8255-2e9ff5e3f08a"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[4-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="145" y="383" width="115" height="9" forecolor="#030202" backcolor="#030303" uuid="45cf8be3-78fa-4c90-a425-d36c4bdce841"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[|__|__|//|__|__|/|__|__| ______________ |]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="145" y="374" width="115" height="9" forecolor="#030202" backcolor="#030303" uuid="e9d2c722-262c-4818-b984-aca513baf437"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[|__|__|//|__|__|/|__|__| ______________ |]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="264" y="374" width="12" height="9" forecolor="#030202" backcolor="#030303" uuid="1447eff8-5ab6-4b07-8955-873e29b22447"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[5-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="264" y="383" width="12" height="9" forecolor="#030202" backcolor="#030303" uuid="ba2771f7-b07a-4937-b925-080ec90a224a"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[6-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="276" y="383" width="115" height="9" forecolor="#030202" backcolor="#030303" uuid="f0766680-846a-48ec-a43c-3bc413abd1b5"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[|__|__|//|__|__|/|__|__| ______________ |]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="276" y="374" width="115" height="9" forecolor="#030202" backcolor="#030303" uuid="16dcd91a-656f-4e0b-84b4-8f0674f8ca06"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[|__|__|//|__|__|/|__|__| ______________ |]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="391" y="374" width="12" height="9" forecolor="#030202" backcolor="#030303" uuid="1b70b5a6-cfba-4432-8a07-c47952ec0113"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[7-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="391" y="383" width="12" height="9" forecolor="#030202" backcolor="#030303" uuid="66041e2d-5f39-4fa1-b48b-505d9e47219e"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[8-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="403" y="383" width="115" height="9" forecolor="#030202" backcolor="#030303" uuid="273863a4-c238-451b-8405-f22ff26522fb"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[|__|__|//|__|__|/|__|__| ______________ |]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="403" y="374" width="115" height="9" forecolor="#030202" backcolor="#030303" uuid="62c934b6-8a97-4362-95b2-fae77b1a5d41"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[|__|__|//|__|__|/|__|__| ______________ |]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="521" y="374" width="12" height="9" forecolor="#030202" backcolor="#030303" uuid="33411916-bf5b-44ec-ba40-ee7ec1de2b9c"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[9-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="521" y="383" width="12" height="9" forecolor="#030202" backcolor="#030303" uuid="46fa0c2b-6c9b-4793-9384-73f2845c6fbc"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[10-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="533" y="383" width="115" height="9" forecolor="#030202" backcolor="#030303" uuid="82066150-0517-446a-9866-defedb9e17e5"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[|__|__|//|__|__|/|__|__| ______________ |]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="533" y="374" width="115" height="9" forecolor="#030202" backcolor="#030303" uuid="2b008ebe-54d9-4b3f-8e05-f541a794423d"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[|__|__|//|__|__|/|__|__| ______________ |]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="653" y="374" width="12" height="9" forecolor="#030202" backcolor="#030303" uuid="507586a0-1275-4c21-b8da-3eb824f52f7e"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[11-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="653" y="383" width="12" height="9" forecolor="#030202" backcolor="#030303" uuid="68136ef0-f1e5-40c3-8a6f-1262e2c5ecac"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[12-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="665" y="383" width="115" height="9" forecolor="#030202" backcolor="#030303" uuid="1fe84eac-c275-401a-b5fe-06630a428194"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[|__|__|//|__|__|/|__|__| ______________ |]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="665" y="374" width="115" height="9" forecolor="#030202" backcolor="#030303" uuid="251886f2-56cc-47d8-908d-2009250eae24"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[|__|__|//|__|__|/|__|__| ______________ |]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="1" y="394" width="801" height="36" backcolor="#D9D9D9" uuid="084d93b2-c2be-4246-8512-b0bd89cb8e8d"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="6" y="395" width="144" height="9" forecolor="#030202" backcolor="#030303" uuid="25993947-c882-422e-9df6-e6804019eba8"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[58 - Observação / Justificação]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="1" y="434" width="97" height="17" uuid="b83f6516-e4f1-4db3-9a30-39ca14bd75a1"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="6" y="434" width="76" height="9" forecolor="#030202" backcolor="#030303" uuid="3998b983-0f62-4462-a539-12bba097d355"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[59 - Total Procedimento R$]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="6" y="442" width="76" height="8" forecolor="#030202" backcolor="#030303" uuid="ea9926d7-0b29-4d1a-8255-3924c23dc5b8"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[|___|___|___|___|,|___|___|]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="100" y="434" width="117" height="17" uuid="08850c04-0408-4034-a1cb-da31cf1135d8"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="219" y="434" width="115" height="17" uuid="ba428560-dd5a-4d0e-b051-516cd32b2625"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="687" y="434" width="115" height="17" uuid="4b4b8fab-5b79-4c81-9ab1-f9cab5977902"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="570" y="434" width="115" height="17" uuid="ff109148-169b-4339-96d3-2eb7237411a5"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="453" y="434" width="115" height="17" uuid="26a2927d-1378-4bee-8c11-b0558b426124"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="336" y="434" width="115" height="17" uuid="b849f948-ff2c-4c7f-ad33-5c0751931cd8"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="104" y="434" width="96" height="9" forecolor="#030202" backcolor="#030303" uuid="dbbdf18e-4db1-4d2b-aa9c-8ffd4c50c4d0"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[60 - Total Taxas e Alugueis R$]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="104" y="442" width="76" height="8" forecolor="#030202" backcolor="#030303" uuid="d763f0b1-6fce-4b1d-bb65-5802be1f61a6"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[|___|___|___|___|,|___|___|]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="223" y="434" width="76" height="9" forecolor="#030202" backcolor="#030303" uuid="155555d6-a475-40fd-aeeb-b51d35c7b58d"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[61 - Total Materiais R$]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="223" y="442" width="76" height="8" forecolor="#030202" backcolor="#030303" uuid="e78d514a-5de6-4274-a263-f51052917c34"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[|___|___|___|___|,|___|___|]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="340" y="434" width="76" height="9" forecolor="#030202" backcolor="#030303" uuid="056977b3-56a3-479b-ad1e-8bbd72235308"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[62 - Total OPME R$]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="340" y="442" width="76" height="8" forecolor="#030202" backcolor="#030303" uuid="8ae2f65c-647e-4ddc-a76d-4cad130ca982"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[|___|___|___|___|,|___|___|]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="457" y="434" width="93" height="9" forecolor="#030202" backcolor="#030303" uuid="9a606507-85b2-4b79-8dfb-13cbdbfcb902"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[63 - Total Medicamentos R$]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="457" y="442" width="76" height="8" forecolor="#030202" backcolor="#030303" uuid="b7eaae1a-cbf3-4138-8599-2e660a8b3fa3"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[|___|___|___|___|,|___|___|]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="574" y="434" width="100" height="9" forecolor="#030202" backcolor="#030303" uuid="f2dba272-0376-4c38-ae84-00c20035c2b4"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[64 - Total Gases Medicinais R$]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="574" y="442" width="76" height="8" forecolor="#030202" backcolor="#030303" uuid="2647774c-b2b3-4ae8-aeac-555bcd79ad31"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[|___|___|___|___|,|___|___|]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="692" y="434" width="76" height="9" forecolor="#030202" backcolor="#030303" uuid="ba74011d-6017-4923-a27a-6cdef3de58c4"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[65 - Total Geral R$]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="692" y="442" width="76" height="8" forecolor="#030202" backcolor="#030303" uuid="23189f19-8757-40df-9ced-8d1f9179886a"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[|___|___|___|___|,|___|___|]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="1" y="454" width="268" height="17" uuid="b843ed71-dbae-407d-b674-cd3cf4a8b3ce"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="271" y="454" width="261" height="17" uuid="b0d6f2fe-1610-422d-ab78-bcc37c5996e1"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="535" y="454" width="267" height="17" uuid="5e80a1c2-30fb-457f-9447-6d55e8efe169"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="6" y="454" width="254" height="9" forecolor="#030202" backcolor="#030303" uuid="1e64b7cb-e53b-4ee2-a014-0f669d69c53c"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[66 - Assinatura do Responsável pela Autorização]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="277" y="454" width="254" height="9" forecolor="#030202" backcolor="#030303" uuid="f91b7360-6947-40db-9c5a-d5d0055dfdf7"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[67 - Assinatura do Beneficiário ou Responsável]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="541" y="454" width="254" height="9" forecolor="#030202" backcolor="#030303" uuid="64363a95-e5a1-4700-af18-978765843704"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[68 - Assinatura do Contratado]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="16" y="242" width="44" height="8" uuid="1b42df9a-96f5-4d9d-a5e6-5ddb46dcfdee"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{dtProcedimentoRealizado1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="16" y="250" width="44" height="8" uuid="66730165-0403-414b-9572-0ddd5d593773"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{dtProcedimentoRealizado2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="16" y="258" width="44" height="8" uuid="82de7d07-74b3-4f08-b874-d1ec32d50122"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{dtProcedimentoRealizado3}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="16" y="266" width="44" height="8" uuid="e2b8d227-6124-4d32-8eb3-865c5a1dccf1"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{dtProcedimentoRealizado4}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="16" y="274" width="44" height="8" uuid="a0a9e88c-bebf-4f80-a51a-de04922984b2"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{dtProcedimentoRealizado5}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="65" y="240" width="50" height="8" uuid="5b2dedf6-5d8d-41c8-98af-8d56e65c90fd"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{horaProcedimentoRealizado1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="65" y="248" width="50" height="8" uuid="ab97cdcf-9753-40e7-9e97-9aa913ccf4d9"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{horaProcedimentoRealizado2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="65" y="256" width="50" height="8" uuid="618858b4-cc9b-4a4f-a485-1f6980791a04"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{horaProcedimentoRealizado3}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="65" y="264" width="50" height="8" uuid="8d446265-f4fb-4bb0-934a-56322a648a50"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{horaProcedimentoRealizado4}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="65" y="272" width="50" height="8" uuid="0d790fed-7e2a-4956-bb28-70b507e27bd2"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{horaProcedimentoRealizado5}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="120" y="272" width="47" height="8" uuid="11c2867e-2812-4a3b-8a0d-03961123e1d0"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{horaProcedimentoRealizado5}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="120" y="264" width="47" height="8" uuid="c11931d2-fee9-4514-855b-55a4572ca52e"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{horaProcedimentoRealizado4}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="120" y="256" width="47" height="8" uuid="1e5943a0-79e7-49ed-a747-2b3e496b4266"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{horaProcedimentoRealizado3}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="120" y="248" width="47" height="8" uuid="3d35fc8d-dd45-419b-8587-0aebc80818f7"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{horaProcedimentoRealizado2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="120" y="240" width="47" height="8" uuid="efa96f40-46e8-40c0-82b6-4d0fda294d5a"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{horaProcedimentoRealizado1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="60" y="404" width="735" height="9" uuid="1f7b3ae4-bed6-483d-a411-607fa3e20bc7"/>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="DejaVu Sans" size="6" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{observacao}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="16" y="122" width="53" height="9" forecolor="#030202" backcolor="#030303" uuid="de0cff23-0930-4ef6-a4af-a413ea86d80d"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[|__|__|]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="16" y="131" width="53" height="9" forecolor="#030202" backcolor="#030303" uuid="c8e5bbdc-6f6b-41f1-a74f-fe2b0615c0b3"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[|__|__|]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="16" y="141" width="53" height="9" forecolor="#030202" backcolor="#030303" uuid="e57e9f3e-a54e-434b-adc0-f52926d9ce42"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[|__|__|]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="16" y="151" width="53" height="9" forecolor="#030202" backcolor="#030303" uuid="cfa98d01-0a91-41dc-8275-ee30d5b3dfb5"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[|__|__|]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="16" y="161" width="53" height="9" forecolor="#030202" backcolor="#030303" uuid="a7a35f8b-d116-467d-ac14-a01cbc8715c5"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[|__|__|]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="60" y="413" width="735" height="9" uuid="d2c8e7f8-e23c-410e-9167-d9375d549762"/>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="DejaVu Sans" size="6" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{justificativa}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="6" y="404" width="54" height="9" forecolor="#030202" backcolor="#030303" uuid="4287d0ae-237a-45e4-84de-9d56da6d7f5a"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[OBSERVAÇÃO:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="6" y="413" width="54" height="9" forecolor="#030202" backcolor="#030303" uuid="bb408404-8c20-4f1c-9caa-0f8344d137b6"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[JUSTIFICATIVA:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="5" y="96" width="93" height="11" uuid="b3ddaad3-902c-408a-96de-1621915593a8"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{caraterAtendimento}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="353" y="193" width="176" height="21" uuid="42b6933f-f330-48eb-ab41-7d70865c9cb5"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="358" y="193" width="86" height="12" forecolor="#030202" backcolor="#030303" uuid="a714b6d2-32cc-479e-9450-3b1fcbd63c35"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[31 - Logradouro]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="358" y="203" width="168" height="10" uuid="e730d42a-855a-48bd-8390-b9eb7dad49ce"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{logradouroContratante}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="531" y="193" width="102" height="21" uuid="6d2ea41e-3211-4005-b123-4479bf3913a1"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="535" y="193" width="86" height="12" forecolor="#030202" backcolor="#030303" uuid="fe19192a-2856-4437-97c2-417bedc154d2"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[32 - Cidade]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="536" y="203" width="96" height="10" uuid="577e96de-9232-4bc9-a206-80149dad3405"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{cidadeContratante}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="635" y="193" width="50" height="21" uuid="4c6e8263-b76d-4966-9af1-ae26c0829e3a"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="639" y="193" width="46" height="12" forecolor="#030202" backcolor="#030303" uuid="1a683b53-f982-4693-801e-d5979f87fafa"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[33 - UF]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="639" y="203" width="44" height="10" uuid="17a9a5b5-1d1b-4412-9982-5fa23ebb4a66"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{ufContratante}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="687" y="193" width="114" height="21" uuid="9706af0d-7ba9-4190-bc15-731c10107877"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="694" y="193" width="88" height="12" forecolor="#030202" backcolor="#030303" uuid="923665c8-9b0b-4be5-9ac5-eaff0adc4a5e"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[33 - Telefone]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="694" y="203" width="105" height="10" uuid="dfae43a2-d5e5-492b-906a-d3303951b638"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{telefoneContratante}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

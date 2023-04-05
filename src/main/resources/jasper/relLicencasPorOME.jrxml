@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.17.0.final using JasperReports Library version 6.17.0-6d93193241dd8cc42629e188b94f9e0bc5722efd  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="relLicencasPaciente" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ccb7b170-4707-4336-869e-7c233b80f2a9">
+	<property name="ireport.background.image.properties" value="false,true,0.25,0,0,0,0,0,0"/>
+	<property name="ireport.zoom" value="2.143588810000013"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="59"/>
+	<style name="Texts" fontName="SansSerif" fontSize="12" isBold="false"/>
+	<parameter name="JMS" class="java.net.URL" isForPrompting="false"/>
+	<parameter name="TITULO" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="totalPms" class="java.lang.Integer" isForPrompting="false"/>
+	<parameter name="totalBms" class="java.lang.Integer" isForPrompting="false"/>
+	<field name="matricula" class="java.lang.Integer"/>
+	<field name="corporacao" class="java.lang.String"/>
+	<field name="ome" class="java.lang.String"/>
+	<field name="nomePaciente" class="java.lang.String"/>
+	<field name="parecer" class="java.lang.String"/>
+	<field name="dataInicial" class="java.lang.String"/>
+	<field name="dias" class="java.lang.Integer"/>
+	<field name="dataFinal" class="java.lang.String"/>
+	<field name="homologacao" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="75" splitType="Stretch">
+			<image>
+				<reportElement x="12" y="7" width="400" height="41" uuid="a5241716-240a-4014-bb70-0a063e1bd5c2"/>
+				<imageExpression><![CDATA[$P{JMS}]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="189" y="47" width="453" height="21" uuid="df01a007-ffc5-4ecf-87ad-5b5098e132b5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{TITULO}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy HH.mm.ss">
+				<reportElement x="702" y="7" width="100" height="20" uuid="80a95de0-3f4c-4963-b251-229df0823d91"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="28" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="4" width="802" height="1" uuid="782e8c3a-ead8-4a22-8344-0d1b00b85505"/>
+			</line>
+			<line>
+				<reportElement x="0" y="27" width="802" height="1" uuid="62c8fa94-592a-4004-8f03-e36b1bd6e830"/>
+			</line>
+			<staticText>
+				<reportElement x="12" y="6" width="74" height="20" uuid="b5047e07-c51b-4f4a-8d57-42511c2c40fd"/>
+				<textElement verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[MATRÍCULA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="91" y="6" width="48" height="20" uuid="9e55b2d7-8359-4ad2-847a-4eb75ef7829b"/>
+				<textElement verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CORP]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="220" y="6" width="154" height="20" uuid="979a8fab-8e43-46f3-b3e2-409c4414f413"/>
+				<textElement verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NOME DO PACIENTE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="384" y="6" width="113" height="20" uuid="a85f0e76-5b92-41a4-9d92-26e2487b34a0"/>
+				<textElement verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PARECER]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="505" y="6" width="73" height="20" uuid="3f25a395-4ee5-4fc1-b1eb-a7856737823f"/>
+				<textElement verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DATA INICIAL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="587" y="6" width="28" height="20" uuid="46400907-b508-4143-885b-b10fc6e7f9b5"/>
+				<textElement verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DIAS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="625" y="6" width="65" height="20" uuid="1377e424-ca10-4c71-9def-14d05fbf02de"/>
+				<textElement verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DATA FINAL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="699" y="6" width="103" height="20" uuid="cff8dd3e-c8fd-4b18-b2a0-bf2e4a1fa1df"/>
+				<textElement verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[HOMOLOGAÇÃO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="145" y="6" width="68" height="20" uuid="c55543fb-9b99-4d21-8489-33b574c617d3"/>
+				<textElement verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[OME]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="21" splitType="Stretch">
+			<textField>
+				<reportElement x="12" y="0" width="74" height="20" uuid="98ec2749-0a6d-48d8-9ae0-9894b796fe7e"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{matricula}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="91" y="0" width="48" height="20" uuid="fb622fda-af5f-4da9-9912-784ee51c2068"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{corporacao}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="146" y="0" width="67" height="20" uuid="bb63b95a-f0dd-4756-b8ee-31475763a336"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ome}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="220" y="0" width="154" height="20" uuid="ac95b3a0-23fb-42a2-9b3b-80490fc66e12"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nomePaciente}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="384" y="0" width="113" height="20" uuid="381bd137-eba6-437a-b991-d3d7a312e7a6"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{parecer}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="506" y="0" width="72" height="20" uuid="28d7ad99-7959-4bee-a650-87fc5e1e6cf9"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{dataInicial}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="587" y="0" width="28" height="20" uuid="b3cfb211-a69e-4b20-ad0c-3bd6f91bdd07"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{dias}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="626" y="0" width="64" height="20" uuid="e2da35d3-dfa4-4663-8ca2-e589fb943d7f"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{dataFinal}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="699" y="0" width="100" height="20" uuid="23ff2288-8044-4027-8838-583b226fb3ba"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{homologacao}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="19" width="802" height="1" uuid="52ca19b7-c69d-453c-9ca0-28b8c4b147b7"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="29" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="48" splitType="Stretch">
+			<textField>
+				<reportElement x="374" y="5" width="80" height="20" uuid="38870314-3f33-4bdc-b492-7992af55a432"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Página "+$V{PAGE_NUMBER}+" de"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="454" y="5" width="40" height="20" uuid="5535fc78-9865-443f-adef-5f3f301580f2"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="40" splitType="Stretch">
+			<rectangle>
+				<reportElement x="510" y="2" width="148" height="20" uuid="eccc2ab9-7bed-426e-84c6-93b7fdfd8d0b"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="658" y="2" width="144" height="20" uuid="cd4023fa-8512-448a-8ef7-96978d3c35f5"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="515" y="2" width="58" height="20" uuid="657e7e7e-d012-49c5-9e2a-589cb7a52977"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[TOTAL PM:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="573" y="2" width="84" height="20" uuid="56bcffac-ca3d-401c-be14-1911a754f691"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{totalPms}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="662" y="2" width="60" height="20" uuid="3f2b8793-4cac-4c51-9fd1-37eb9b83e0e3"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[TOTAL BM:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="720" y="2" width="79" height="20" uuid="5308fa06-3e94-42b8-ae70-1f8dca8d0a85"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{totalBms}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>

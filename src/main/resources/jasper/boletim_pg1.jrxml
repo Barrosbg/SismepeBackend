@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Boletim_detail_1" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="1cc750f1-0b2e-4244-ad3d-3b5f624981db">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="REPORT_CONNECTION"/>
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="91"/>
+	<style name="Texts" fontName="SansSerif" fontSize="12" isBold="false"/>
+	<subDataset name="CasosAcumuladosDataset" uuid="39581794-7f4c-48d6-8f6a-b421776f515c">
+		<field name="data" class="java.util.Date"/>
+		<field name="numCasos" class="java.lang.Integer"/>
+	</subDataset>
+	<subDataset name="CasosPorSemanaDataset" uuid="5d093d9a-4b40-4f87-9358-9657ffa11776">
+		<field name="numSemana" class="java.lang.Integer"/>
+		<field name="numCasos" class="java.lang.Integer"/>
+	</subDataset>
+	<parameter name="LOGO_MINI" class="java.lang.String" isForPrompting="false"/>
+	<field name="suspeitos" class="java.lang.Integer"/>
+	<field name="positivos" class="java.lang.Integer"/>
+	<field name="negativos" class="java.lang.Integer"/>
+	<field name="aguardando" class="java.lang.Integer"/>
+	<field name="naoTestados" class="java.lang.Integer"/>
+	<field name="obitos" class="java.lang.Integer"/>
+	<field name="casosAcumulados" class="java.util.Collection"/>
+	<field name="casosPorSemana" class="java.util.Collection"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="47" splitType="Stretch">
+			<image>
+				<reportElement x="0" y="0" width="130" height="47" uuid="49ed27af-1911-4563-863e-e4e6b94f85d5"/>
+				<imageExpression><![CDATA[$P{LOGO_MINI}]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="410" y="0" width="140" height="30" uuid="bec3a947-447d-4a5c-8fde-ff6b87b79d54"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[DIRETORIA DE SAÚDE]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="651" splitType="Stretch">
+			<staticText>
+				<reportElement x="28" y="20" width="498" height="30" uuid="3d40b911-8ee1-4fc8-b35d-56e3239d0d23"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[RESUMO EPIDEMIOLÓGICO DA COVID-19 NO HOSPITAL DA PMPE]]></text>
+			</staticText>
+			<textField>
+				<reportElement style="Texts" x="10" y="79" width="514" height="70" uuid="00c9307f-4f40-478c-bd58-b73beb69225d"/>
+				<textElement textAlignment="Justified">
+					<paragraph lineSpacing="1_1_2"/>
+				</textElement>
+				<textFieldExpression><![CDATA["	Desde o início da contabilização dos casos foram detectados " + $F{suspeitos} +
+				" casos suspeitos no CMH, sendo: " + $F{positivos} + " COVID positivos, " + $F{negativos} + " casos negativos; " +
+				$F{aguardando} + " casos aguardando resultados e " + $F{naoTestados} + " casos ainda não testados; foram notificados "+
+				$F{obitos} + " casos que evoluíram para óbito com COVID-19."]]></textFieldExpression>
+			</textField>
+			<lineChart>
+				<chart evaluationTime="Report" theme="default">
+					<reportElement x="40" y="159" width="480" height="231" forecolor="#666666" uuid="7e9ecf53-3084-4162-b533-4303a9bd08d6"/>
+					<chartTitle position="Bottom" color="#000000">
+						<font isItalic="true"/>
+						<titleExpression><![CDATA["Figura 1 Casos acumulados de COVID-19"]]></titleExpression>
+					</chartTitle>
+					<chartSubtitle/>
+					<chartLegend textColor="#666666" position="Top">
+						<font size="6"/>
+					</chartLegend>
+				</chart>
+				<categoryDataset>
+					<dataset>
+						<datasetRun subDataset="CasosAcumuladosDataset" uuid="be7ea639-ee87-426f-83ac-f83da3aa4113">
+							<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{casosAcumulados})]]></dataSourceExpression>
+						</datasetRun>
+					</dataset>
+					<categorySeries>
+						<seriesExpression><![CDATA["Casos COVID-19"]]></seriesExpression>
+						<categoryExpression><![CDATA[new SimpleDateFormat("dd/MM/yy").format($F{data})]]></categoryExpression>
+						<valueExpression><![CDATA[$F{numCasos}]]></valueExpression>
+					</categorySeries>
+				</categoryDataset>
+				<linePlot isShowShapes="false">
+					<plot labelRotation="5.0">
+						<seriesColor seriesOrder="0" color="#FFA513"/>
+					</plot>
+					<categoryAxisFormat labelRotation="5.0">
+						<axisFormat labelColor="#666666" tickLabelColor="#666666" axisLineColor="#666666">
+							<tickLabelFont>
+								<font size="6" isBold="false"/>
+							</tickLabelFont>
+						</axisFormat>
+					</categoryAxisFormat>
+					<valueAxisFormat>
+						<axisFormat labelColor="#666666" tickLabelColor="#666666" verticalTickLabels="false" axisLineColor="#666666">
+							<tickLabelFont>
+								<font size="6"/>
+							</tickLabelFont>
+						</axisFormat>
+					</valueAxisFormat>
+				</linePlot>
+			</lineChart>
+			<lineChart>
+				<chart evaluationTime="Report" theme="default">
+					<reportElement x="40" y="411" width="480" height="231" forecolor="#666666" uuid="8d0332fb-afd8-4451-ac9e-a4f9b39863d1"/>
+					<chartTitle position="Bottom" color="#000000">
+						<font isItalic="true"/>
+						<titleExpression><![CDATA["Figura 2 Casos confirmados por semana epidemiológica"]]></titleExpression>
+					</chartTitle>
+					<chartSubtitle/>
+					<chartLegend textColor="#666666" position="Top">
+						<font size="6"/>
+					</chartLegend>
+				</chart>
+				<categoryDataset>
+					<dataset>
+						<datasetRun subDataset="CasosPorSemanaDataset" uuid="6a176bcb-9311-40fa-84e9-872531e86afd">
+							<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{casosPorSemana})]]></dataSourceExpression>
+						</datasetRun>
+					</dataset>
+					<categorySeries>
+						<seriesExpression><![CDATA["Casos COVID-19"]]></seriesExpression>
+						<categoryExpression><![CDATA[$F{numSemana}]]></categoryExpression>
+						<valueExpression><![CDATA[$F{numCasos}]]></valueExpression>
+					</categorySeries>
+				</categoryDataset>
+				<linePlot>
+					<plot>
+						<seriesColor seriesOrder="0" color="#FFA513"/>
+					</plot>
+					<categoryAxisFormat>
+						<axisFormat labelColor="#666666" tickLabelColor="#666666" axisLineColor="#666666">
+							<tickLabelFont>
+								<font size="6" isBold="false"/>
+							</tickLabelFont>
+						</axisFormat>
+					</categoryAxisFormat>
+					<valueAxisFormat>
+						<axisFormat labelColor="#666666" tickLabelColor="#666666" verticalTickLabels="false" axisLineColor="#666666">
+							<tickLabelFont>
+								<font size="6"/>
+							</tickLabelFont>
+						</axisFormat>
+					</valueAxisFormat>
+				</linePlot>
+			</lineChart>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="37" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="0" y="1" width="555" height="24" uuid="729c3539-f946-4d0e-a0a7-bda2815ea1b0"/>
+				<textField evaluationTime="Auto">
+					<reportElement x="513" y="0" width="40" height="20" uuid="4834e99c-7f6c-485a-b098-50e5187f2ab4"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</pageFooter>
+</jasperReport>

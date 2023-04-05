@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ResultadoExamesExternos" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="b30719a7-3dc3-433d-ac5c-10604c01d6a5">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="LOGO" class="java.net.URL" isForPrompting="false"/>
+	<parameter name="pessoa" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="prestador" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="grupoSanguineo" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="rhd" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="comboIndireto" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="comboDireto" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="dataCadastro" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="matricula" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="imagem" class="java.net.URL" isForPrompting="false"/>
+	<parameter name="imagemDt" class="java.net.URL" isForPrompting="false"/>
+	<detail>
+		<band height="79" splitType="Stretch">
+			<image>
+				<reportElement x="18" y="0" width="437" height="68" uuid="07c1d3ca-b677-44c9-8add-5461c7ccb8c2"/>
+				<imageExpression><![CDATA[$P{LOGO}]]></imageExpression>
+			</image>
+		</band>
+		<band height="45" splitType="Stretch">
+			<staticText>
+				<reportElement x="23" y="15" width="321" height="20" uuid="480174ed-4235-4cdc-9553-3e35e3e972df"/>
+				<text><![CDATA[RESULTADO EXAMES AGÊNCIA  TRANSFUSIONAL]]></text>
+			</staticText>
+		</band>
+		<band height="521" splitType="Stretch">
+			<staticText>
+				<reportElement x="23" y="67" width="50" height="20" uuid="04962e1a-d9cf-4c6a-b261-9fd5b9ee609b"/>
+				<textElement verticalAlignment="Middle">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nome: ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="73" y="67" width="319" height="20" uuid="058f3c07-2f84-4850-8932-8aaa7dbfd052"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{pessoa}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="23" y="37" width="68" height="20" uuid="d15c4c2d-ce16-4cc9-be9a-7ccfff569590"/>
+				<textElement verticalAlignment="Middle">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Matrícula:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="91" y="37" width="100" height="20" uuid="2169816f-55bd-4d81-91ca-5e412a8bb5f4"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{matricula}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="23" y="101" width="122" height="20" uuid="844f5595-fade-4ed2-b1d3-8e3895567ff0"/>
+				<textElement verticalAlignment="Middle">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Data de Cadastro:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="23" y="131" width="68" height="20" uuid="e7a86973-128b-482b-a1ad-9a5a5ee16b68"/>
+				<textElement verticalAlignment="Middle">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Prestador:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="23" y="163" width="122" height="20" uuid="65a8968d-53ec-4472-94c1-32f7469022f1"/>
+				<textElement verticalAlignment="Middle">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Grupo Sanguineo:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="23" y="198" width="40" height="20" uuid="8877c2ad-b40b-425b-afb7-df65ac1777e4"/>
+				<textElement verticalAlignment="Middle">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[RDH:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="23" y="231" width="94" height="20" uuid="3dbae74c-326c-4162-a1c0-fa26759c735e"/>
+				<textElement verticalAlignment="Middle">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Combs Direto:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="23" y="264" width="110" height="20" uuid="eb4ee871-a4a7-4e86-939a-431849ad6c5f"/>
+				<textElement verticalAlignment="Middle">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Combas Indireto:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="145" y="101" width="200" height="20" uuid="a18b96d5-8be3-46db-994a-8c68b4a53413"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{dataCadastro}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="91" y="131" width="390" height="20" uuid="4f960c05-80c3-4c92-a9e2-c6f9315fb94d"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{prestador}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="145" y="163" width="147" height="20" uuid="52827c20-8f17-4627-ae36-8e50ca3ce691"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{grupoSanguineo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="63" y="198" width="140" height="20" uuid="a1e51cd4-4171-44aa-8f3c-ff55420bebf7"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{rhd}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="117" y="231" width="100" height="20" uuid="41d51cb8-0a1e-40fc-bbe8-dcc444664e33"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{comboDireto}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="133" y="264" width="100" height="20" uuid="2b5ff9d0-3227-4dc6-8292-e7ce92f2acc8"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{comboIndireto}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="147" splitType="Stretch">
+			<image>
+				<reportElement x="233" y="16" width="100" height="50" uuid="acdb9b5b-343c-4361-a2a6-d60b6244695b"/>
+				<imageExpression><![CDATA[$P{imagem}]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="233" y="66" width="100" height="50" uuid="73f0a105-717b-4adb-8b7a-e65b13e9fdd7"/>
+				<imageExpression><![CDATA[$P{imagemDt}]]></imageExpression>
+			</image>
+		</band>
+	</detail>
+</jasperReport>

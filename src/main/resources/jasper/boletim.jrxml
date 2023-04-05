@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.12.2.final using JasperReports Library version 6.12.2-75c5e90a222ab406e416cbf590a5397028a52de3  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Boletim_Book" pageWidth="595" pageHeight="842" sectionType="Part" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="30" bottomMargin="30" uuid="d2716064-8ae4-40cf-a575-33afba400e3a">
+	<property name="com.jaspersoft.studio.book.group.cover.header" value="Cover"/>
+	<property name="com.jaspersoft.studio.book.group.cover.footer" value="Backcover"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	
+	<parameter name="LOGO" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="CAPA_IMAGEM_CIMA" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="CAPA_IMAGEM_BAIXO" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="LOGO_MINI" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="DATA_BOLETIM" class="java.util.Date" isForPrompting="false"/>
+	
+	<parameter name="capaJR" class="net.sf.jasperreports.engine.JasperReport"/>
+	<parameter name="pagina1JR" class="net.sf.jasperreports.engine.JasperReport"/>
+	<parameter name="pagina2JR" class="net.sf.jasperreports.engine.JasperReport"/>
+	<parameter name="pagina3JR" class="net.sf.jasperreports.engine.JasperReport"/>
+	<parameter name="pagina4JR" class="net.sf.jasperreports.engine.JasperReport"/>
+
+	<field name="pagina1" class="java.lang.Object"/>
+	<field name="pagina2" class="java.lang.Object"/>
+	<field name="pagina3" class="java.lang.Object"/>
+	<field name="pagina4" class="java.lang.Object"/>
+	
+	<group name="cover">
+		<groupHeader>
+			<part uuid="7aed05b9-1301-4a53-b47e-34289560bc0c">
+				<p:subreportPart xmlns:p="http://jasperreports.sourceforge.net/jasperreports/parts" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/parts http://jasperreports.sourceforge.net/xsd/parts.xsd">
+					<subreportParameter name="LOGO">
+						<subreportParameterExpression><![CDATA[$P{LOGO}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="CAPA_IMAGEM_CIMA">
+						<subreportParameterExpression><![CDATA[$P{CAPA_IMAGEM_CIMA}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="CAPA_IMAGEM_BAIXO">
+						<subreportParameterExpression><![CDATA[$P{CAPA_IMAGEM_BAIXO}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="DATA_BOLETIM">
+						<subreportParameterExpression><![CDATA[$P{DATA_BOLETIM}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportExpression><![CDATA[$P{capaJR}]]></subreportExpression>
+				</p:subreportPart>
+			</part>
+		</groupHeader>
+	</group>
+	<detail>
+		<part evaluationTime="Report" uuid="925a764f-5e03-484c-a236-191c878e702c">
+			<p:subreportPart xmlns:p="http://jasperreports.sourceforge.net/jasperreports/parts" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/parts http://jasperreports.sourceforge.net/xsd/parts.xsd">
+				<subreportParameter name="LOGO_MINI">
+					<subreportParameterExpression><![CDATA[$P{LOGO_MINI}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="REPORT_DATA_SOURCE">
+					<subreportParameterExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource(java.util.Arrays.asList($F{pagina1}))]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportExpression><![CDATA[$P{pagina1JR}]]></subreportExpression>
+			</p:subreportPart>
+		</part>
+		<part uuid="557dcda7-168a-47d9-90a2-30ac8e6e1ca5">
+			<p:subreportPart xmlns:p="http://jasperreports.sourceforge.net/jasperreports/parts" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/parts http://jasperreports.sourceforge.net/xsd/parts.xsd">
+				<subreportParameter name="LOGO_MINI">
+					<subreportParameterExpression><![CDATA[$P{LOGO_MINI}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="DATA_BOLETIM">
+					<subreportParameterExpression><![CDATA[$P{DATA_BOLETIM}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="REPORT_DATA_SOURCE">
+					<subreportParameterExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource(java.util.Arrays.asList($F{pagina2}))]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportExpression><![CDATA[$P{pagina2JR}]]></subreportExpression>
+			</p:subreportPart>
+		</part>
+		<part uuid="e33dacad-b2c1-49b4-912a-a30751fe20ac">
+			<p:subreportPart xmlns:p="http://jasperreports.sourceforge.net/jasperreports/parts" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/parts http://jasperreports.sourceforge.net/xsd/parts.xsd">
+				<subreportParameter name="LOGO_MINI">
+					<subreportParameterExpression><![CDATA[$P{LOGO_MINI}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="REPORT_DATA_SOURCE">
+					<subreportParameterExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource(java.util.Arrays.asList($F{pagina3}))]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportExpression><![CDATA[$P{pagina3JR}]]></subreportExpression>
+			</p:subreportPart>
+		</part>
+		<part uuid="557d002b-e013-428e-ba52-f3a34bc8dac5">
+			<p:subreportPart xmlns:p="http://jasperreports.sourceforge.net/jasperreports/parts" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/parts http://jasperreports.sourceforge.net/xsd/parts.xsd">
+				<subreportParameter name="LOGO_MINI">
+					<subreportParameterExpression><![CDATA[$P{LOGO_MINI}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="REPORT_DATA_SOURCE">
+					<subreportParameterExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource(java.util.Arrays.asList($F{pagina4}))]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportExpression><![CDATA[$P{pagina4JR}]]></subreportExpression>
+			</p:subreportPart>
+		</part>
+	</detail>
+</jasperReport>

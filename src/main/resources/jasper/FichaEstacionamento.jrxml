@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="FichaEstacionamento" columnCount="3" printOrder="Horizontal" pageWidth="700" pageHeight="842" columnWidth="220" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="2f3c4057-9e23-4596-a9d2-7cb09171029b">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="LOGO" class="java.net.URL" isForPrompting="false"/>
+	<field name="nome" class="java.lang.String"/>
+	<field name="setor" class="java.lang.String"/>
+	<field name="modelo" class="java.lang.String"/>
+	<field name="placa" class="java.lang.String"/>
+	<detail>
+		<band height="260" splitType="Immediate">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement mode="Transparent" x="74" y="107" width="130" height="20" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" isPrintWhenDetailOverflows="true" uuid="49b3d111-6b4e-4bfd-8661-12bc8ee381f5"/>
+				<textFieldExpression><![CDATA[$F{nome}]]></textFieldExpression>
+			</textField>
+			<rectangle radius="11">
+				<reportElement positionType="Float" stretchType="RelativeToBandHeight" mode="Transparent" x="19" y="0" width="195" height="254" isPrintWhenDetailOverflows="true" uuid="dd3f15ec-e959-4751-a4c3-921d0f45c19a"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="32" y="107" width="42" height="20" uuid="82be4515-a044-430f-a67f-467fbd8840c1"/>
+				<text><![CDATA[Nome:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="32" y="152" width="42" height="20" uuid="f3797174-9214-4cb8-bf77-f3f5f85f96cf"/>
+				<text><![CDATA[Setor:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="32" y="192" width="42" height="20" uuid="0452e3c1-a8ea-4ff2-8d14-af3826323dc5"/>
+				<text><![CDATA[Placa:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement mode="Transparent" x="74" y="152" width="105" height="20" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" isPrintWhenDetailOverflows="true" uuid="54bb2abb-2333-45dd-8641-6ee59b186427"/>
+				<textFieldExpression><![CDATA[$F{setor}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement mode="Transparent" x="74" y="192" width="105" height="20" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" isPrintWhenDetailOverflows="true" uuid="63d3ac79-ea33-4881-bbce-dae7876d6e9b"/>
+				<textFieldExpression><![CDATA[$F{placa}]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="49" y="36" width="134" height="50" uuid="bc4e4041-0870-4844-b835-f2dab5fe729d"/>
+				<imageExpression><![CDATA[$P{LOGO}]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="32" y="172" width="42" height="20" uuid="dde45f47-50e4-401a-b77e-81a7a8d068cd"/>
+				<text><![CDATA[Modelo:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement mode="Transparent" x="74" y="172" width="105" height="20" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" isPrintWhenDetailOverflows="true" uuid="fc1a61d6-db70-4799-a2d5-ab90cbe0a443"/>
+				<textFieldExpression><![CDATA[$F{modelo}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

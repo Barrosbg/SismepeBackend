@@ -1,0 +1,588 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.12.2.final using JasperReports Library version 6.12.2-75c5e90a222ab406e416cbf590a5397028a52de3  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Boletim_detail_3" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="b1ac81b5-5d25-4b48-9436-2933b0613cfe">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<style name="rect-header" backcolor="#4F81BD"/>
+	<style name="text-header" forecolor="#FFFFFF" isBold="true"/>
+	<style name="row-color-1" backcolor="#B8CCE4"/>
+	<style name="row-color-2" backcolor="#DBE5F1"/>
+	<style name="text-totals" isBold="true"/>
+	
+	<subDataset name="SituacaoLeitosDataset" uuid="85ae544e-149f-4164-b9f9-d96ee72ddbb9">
+		<field name="tipo" class="java.lang.String"/>
+		<field name="numLeitos" class="java.lang.Integer"/>
+	</subDataset>
+	<subDataset name="FaixaEtariaDataset" uuid="3d40b911-8ee1-4fc8-b35d-56e3239d0d23">
+		<field name="faixaEtariaInicio" class="java.lang.Integer"/>
+		<field name="faixaEtariaFim" class="java.lang.Integer"/>
+		<field name="numCasos" class="java.lang.Integer"/>
+	</subDataset>
+	
+	<parameter name="LOGO_MINI" class="java.lang.String" isForPrompting="false"/>
+	
+	<field name="situacaoGequar" class="java.util.Collection"/>
+	<field name="situacaoGeter" class="java.util.Collection"/>
+	<field name="situacaoSpaCovid19" class="java.util.Collection"/>
+	<field name="situacaoUti" class="java.util.Collection"/>
+	
+	<field name="internadosGequar" class="java.lang.Integer"/>
+	<field name="totalLeitosGequar" class="java.lang.Integer"/>
+	<field name="internadosGeter" class="java.lang.Integer"/>
+	<field name="totalLeitosGeter" class="java.lang.Integer"/>
+	<field name="internadosSpaCovid19" class="java.lang.Integer"/>
+	<field name="totalLeitosSpaCovid19" class="java.lang.Integer"/>
+	<field name="internadosUti" class="java.lang.Integer"/>
+	<field name="totalLeitosUti" class="java.lang.Integer"/>
+	
+	<field name="pmTitularesAtivos" class="java.lang.Integer"/>
+	<field name="pmTitularesInativos" class="java.lang.Integer"/>
+	<field name="pmDependentesAtivos" class="java.lang.Integer"/>
+	<field name="pmDependentesInativos" class="java.lang.Integer"/>
+	<field name="cbmTitularesAtivos" class="java.lang.Integer"/>
+	<field name="cbmTitularesInativos" class="java.lang.Integer"/>
+	<field name="cbmDependentesAtivos" class="java.lang.Integer"/>
+	<field name="cbmDependentesInativos" class="java.lang.Integer"/>
+	
+	<field name="grupoFaixaEtaria" class="java.util.Collection"/>
+	
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="47" splitType="Stretch">
+			<image>
+				<reportElement x="0" y="0" width="130" height="47" uuid="49ed27af-1911-4563-863e-e4e6b94f85d5"/>
+				<imageExpression><![CDATA[$P{LOGO_MINI}]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="410" y="0" width="140" height="30" uuid="bec3a947-447d-4a5c-8fde-ff6b87b79d54"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[DIRETORIA DE SAÚDE]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="590" splitType="Stretch">
+			<frame>
+				<reportElement x="0" y="36" width="554" height="134" uuid="9f2213ed-3978-4b4a-afcb-3988e9ae2b3e"/>
+				<pieChart>
+					<chart isShowLegend="true" evaluationTime="Report">
+						<reportElement x="1" y="0" width="138" height="104" uuid="94f2e043-db69-43e4-9508-1c89b89eb73b"/>
+						<chartTitle position="Top">
+							<font isBold="true"/>
+							<titleExpression><![CDATA["GEQUAR"]]></titleExpression>
+						</chartTitle>
+						<chartSubtitle>
+							<subtitleExpression><![CDATA["Lotação: " + (100 * $F{internadosGequar}/$F{totalLeitosGequar}) + "%"]]></subtitleExpression>
+						</chartSubtitle>
+						<chartLegend position="Bottom">
+							<font size="8"/>
+						</chartLegend>
+					</chart>
+					<pieDataset>
+						<dataset resetType="Report">
+							<datasetRun subDataset="SituacaoLeitosDataset" uuid="b7173f96-25f0-4518-8b0e-aeb569cc0206">
+								<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{situacaoGequar})]]></dataSourceExpression>
+							</datasetRun>
+						</dataset>
+						<keyExpression><![CDATA[$F{tipo}]]></keyExpression>
+						<valueExpression><![CDATA[$F{numLeitos}]]></valueExpression>
+						<labelExpression><![CDATA[$F{numLeitos} + ""]]></labelExpression>
+					</pieDataset>
+					<piePlot>
+						<plot>
+							<seriesColor seriesOrder="0" color="#D94A36"/>
+							<seriesColor seriesOrder="1" color="#01A657"/>
+						</plot>
+						<itemLabel/>
+					</piePlot>
+				</pieChart>
+				<pieChart>
+					<chart isShowLegend="true" evaluationTime="Report">
+						<reportElement x="140" y="0" width="138" height="104" uuid="db059f77-0b2f-42a6-98f3-c07f1bd98b9a"/>
+						<chartTitle position="Top">
+							<font isBold="true"/>
+							<titleExpression><![CDATA["GETER"]]></titleExpression>
+						</chartTitle>
+						<chartSubtitle>
+							<subtitleExpression><![CDATA["Lotação: " + (100 * $F{internadosGeter}/$F{totalLeitosGeter}) + "%"]]></subtitleExpression>
+						</chartSubtitle>
+						<chartLegend position="Bottom">
+							<font size="8"/>
+						</chartLegend>
+					</chart>
+					<pieDataset>
+						<dataset resetType="Report">
+							<datasetRun subDataset="SituacaoLeitosDataset" uuid="eed59a2f-379d-4c67-91b7-c998a96cb5cd">
+								<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{situacaoGeter})]]></dataSourceExpression>
+							</datasetRun>
+						</dataset>
+						<keyExpression><![CDATA[$F{tipo}]]></keyExpression>
+						<valueExpression><![CDATA[$F{numLeitos}]]></valueExpression>
+						<labelExpression><![CDATA[$F{numLeitos} + ""]]></labelExpression>
+					</pieDataset>
+					<piePlot>
+						<plot>
+							<seriesColor seriesOrder="0" color="#D94A36"/>
+							<seriesColor seriesOrder="1" color="#01A657"/>
+						</plot>
+						<itemLabel/>
+					</piePlot>
+				</pieChart>
+				<pieChart>
+					<chart isShowLegend="true" evaluationTime="Report">
+						<reportElement x="278" y="0" width="138" height="104" uuid="8e1b6ce2-41fd-4469-9956-058373c66e7e"/>
+						<chartTitle position="Top">
+							<font isBold="true"/>
+							<titleExpression><![CDATA["SPA COVID-19"]]></titleExpression>
+						</chartTitle>
+						<chartSubtitle>
+							<subtitleExpression><![CDATA["Lotação: " + (100 * $F{internadosSpaCovid19}/$F{totalLeitosSpaCovid19}) + "%"]]></subtitleExpression>
+						</chartSubtitle>
+						<chartLegend position="Bottom">
+							<font size="8"/>
+						</chartLegend>
+					</chart>
+					<pieDataset>
+						<dataset resetType="Report">
+							<datasetRun subDataset="SituacaoLeitosDataset" uuid="719e0c1e-6645-4ab5-bd32-c1422980371e">
+								<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{situacaoSpaCovid19})]]></dataSourceExpression>
+							</datasetRun>
+						</dataset>
+						<keyExpression><![CDATA[$F{tipo}]]></keyExpression>
+						<valueExpression><![CDATA[$F{numLeitos}]]></valueExpression>
+						<labelExpression><![CDATA[$F{numLeitos} + ""]]></labelExpression>
+					</pieDataset>
+					<piePlot>
+						<plot>
+							<seriesColor seriesOrder="0" color="#D94A36"/>
+							<seriesColor seriesOrder="1" color="#01A657"/>
+						</plot>
+						<itemLabel/>
+					</piePlot>
+				</pieChart>
+				<pieChart>
+					<chart isShowLegend="true" evaluationTime="Report">
+						<reportElement x="416" y="0" width="138" height="104" uuid="0b5ec677-4b9c-44ee-86de-9af6a4280bf5"/>
+						<chartTitle position="Top">
+							<font isBold="true"/>
+							<titleExpression><![CDATA["UTI"]]></titleExpression>
+						</chartTitle>
+						<chartSubtitle>
+							<subtitleExpression><![CDATA["Lotação: " + (100 * $F{internadosUti}/$F{totalLeitosUti}) + "%"]]></subtitleExpression>
+						</chartSubtitle>
+						<chartLegend position="Bottom">
+							<font size="8"/>
+						</chartLegend>
+					</chart>
+					<pieDataset>
+						<dataset resetType="Report">
+							<datasetRun subDataset="SituacaoLeitosDataset" uuid="b8263e96-be1f-489b-b1ab-9c8a0fdd4fa0">
+								<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{situacaoUti})]]></dataSourceExpression>
+							</datasetRun>
+						</dataset>
+						<keyExpression><![CDATA[$F{tipo}]]></keyExpression>
+						<valueExpression><![CDATA[$F{numLeitos}]]></valueExpression>
+						<labelExpression><![CDATA[$F{numLeitos} + ""]]></labelExpression>
+					</pieDataset>
+					<piePlot>
+						<plot>
+							<seriesColor seriesOrder="0" color="#D94A36"/>
+							<seriesColor seriesOrder="1" color="#01A657"/>
+						</plot>
+						<itemLabel/>
+					</piePlot>
+				</pieChart>
+				<staticText>
+					<reportElement x="0" y="113" width="552" height="21" uuid="fa61092e-f64d-4677-b0bf-2ee33cfe06eb"/>
+					<textElement textAlignment="Center">
+						<font size="10" isItalic="true"/>
+					</textElement>
+					<text><![CDATA[Figura 4 Unidades de Internação COVID-19]]></text>
+				</staticText>
+			</frame>
+			<staticText>
+				<reportElement x="28" y="189" width="498" height="30" uuid="b4e8c25b-6c52-4e20-8311-da3c36dad527"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PERFIL DOS CASOS POSITIVOS PARA COVID-19]]></text>
+			</staticText>
+			<frame>
+				<reportElement x="82" y="238" width="390" height="136" uuid="c2c276a1-cf8c-40eb-ad98-6955bf6e0393"/>
+				<rectangle>
+					<reportElement style="rect-header" x="0" y="1" width="80" height="18" uuid="002c591f-491a-4647-a64c-40f7193ee5f8"/>
+					<graphicElement>
+						<pen lineWidth="0.0" lineStyle="Solid"/>
+					</graphicElement>
+				</rectangle>
+				<rectangle>
+					<reportElement style="rect-header" x="80" y="1" width="80" height="18" uuid="268ebe30-0142-46cd-9154-d76617509a0c"/>
+					<graphicElement>
+						<pen lineWidth="0.0" lineStyle="Solid"/>
+					</graphicElement>
+				</rectangle>
+				<rectangle>
+					<reportElement style="rect-header" x="160" y="1" width="80" height="18" uuid="848d19ae-5893-4202-8885-e6c1538cfabc"/>
+					<graphicElement>
+						<pen lineWidth="0.0" lineStyle="Solid"/>
+					</graphicElement>
+				</rectangle>
+				<staticText>
+					<reportElement style="text-header" x="170" y="1" width="60" height="18" uuid="8e0a8a5f-956e-4322-bdb9-d99e55a55e40"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<text><![CDATA[ATIVOS]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement style="rect-header" x="240" y="1" width="80" height="18" uuid="51944f81-50c7-481a-bb49-91a6e4167c7a"/>
+					<graphicElement>
+						<pen lineWidth="0.0" lineStyle="Solid"/>
+					</graphicElement>
+				</rectangle>
+				<staticText>
+					<reportElement style="text-header" x="250" y="1" width="60" height="18" uuid="1f994f77-2670-459c-9491-870f61ec2744"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<text><![CDATA[INATIVOS]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement style="rect-header" x="320" y="1" width="70" height="18" uuid="cd8686e2-798d-41f6-8316-c50a8af4e6bc"/>
+					<graphicElement>
+						<pen lineWidth="0.0" lineStyle="Solid"/>
+					</graphicElement>
+				</rectangle>
+				<staticText>
+					<reportElement style="text-header" x="328" y="1" width="50" height="18" uuid="425456b2-1297-464f-822f-12a1a63be672"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<text><![CDATA[TOTAL]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement style="rect-header" x="0" y="19" width="80" height="36" uuid="4ba6d4cd-0973-4ad2-b84a-db8d2df9799a"/>
+					<graphicElement>
+						<pen lineWidth="1.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+					</graphicElement>
+				</rectangle>
+				<staticText>
+					<reportElement style="text-header" x="10" y="19" width="60" height="18" uuid="82412cf3-af97-47b7-ac67-22df01b12a1f"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<text><![CDATA[PM]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement style="row-color-1" x="80" y="19" width="80" height="18" uuid="72e87024-1c41-48de-b0d1-4b41986a0d39"/>
+					<graphicElement>
+						<pen lineWidth="1.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+					</graphicElement>
+				</rectangle>
+				<staticText>
+					<reportElement x="83" y="19" width="60" height="18" uuid="8bd4d427-b5c4-491a-9948-663f60e157c2"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle"/>
+					<text><![CDATA[TITULARES]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement style="row-color-1" x="160" y="19" width="80" height="18" uuid="4aa4a156-327c-4b9a-8b7e-8f0502087357"/>
+					<graphicElement>
+						<pen lineWidth="1.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+					</graphicElement>
+				</rectangle>
+				<textField>
+					<reportElement x="179" y="19" width="58" height="18" uuid="0103d414-6289-49a7-ac23-e11d0872bfe6"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle"/>
+					<textFieldExpression><![CDATA[$F{pmTitularesAtivos}]]></textFieldExpression>
+				</textField>
+				<rectangle>
+					<reportElement style="row-color-1" x="240" y="19" width="80" height="18" uuid="d6ec5eea-b367-4e5a-b7b2-0e3427c65901"/>
+					<graphicElement>
+						<pen lineWidth="1.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+					</graphicElement>
+				</rectangle>
+				<textField>
+					<reportElement x="259" y="19" width="58" height="18" uuid="7d832d81-7561-4e75-b0a8-e5455604eeb9"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle"/>
+					<textFieldExpression><![CDATA[$F{pmTitularesInativos}]]></textFieldExpression>
+				</textField>
+				<rectangle>
+					<reportElement style="row-color-1" x="320" y="19" width="70" height="18" uuid="1ec598aa-d061-4c10-bc82-3ff7ff83b539"/>
+					<graphicElement>
+						<pen lineWidth="1.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+					</graphicElement>
+				</rectangle>
+				<textField>
+					<reportElement x="329" y="19" width="58" height="18" uuid="7b7bba83-2a5d-46d2-81e8-ddff8d06b4fa"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle"/>
+					<textFieldExpression><![CDATA[$F{pmTitularesAtivos} + $F{pmTitularesInativos}]]></textFieldExpression>
+				</textField>
+				<rectangle>
+					<reportElement style="row-color-2" x="80" y="37" width="80" height="18" uuid="775a3825-0bb9-4e31-8f7d-039b0f218250"/>
+					<graphicElement>
+						<pen lineWidth="1.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+					</graphicElement>
+				</rectangle>
+				<staticText>
+					<reportElement x="83" y="37" width="76" height="18" uuid="8264726f-8ad5-456c-aefc-69f00a4f1fbd"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle"/>
+					<text><![CDATA[DEPENDENTES]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement style="row-color-2" x="160" y="37" width="80" height="18" uuid="276975bb-f7c9-4ecc-9ba8-994c2bc74fe2"/>
+					<graphicElement>
+						<pen lineWidth="1.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+					</graphicElement>
+				</rectangle>
+				<textField>
+					<reportElement x="179" y="37" width="58" height="18" uuid="9efc99fb-a596-4e00-9cd8-632189b1a67d"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle"/>
+					<textFieldExpression><![CDATA[$F{pmDependentesAtivos}]]></textFieldExpression>
+				</textField>
+				<rectangle>
+					<reportElement style="row-color-2" x="240" y="37" width="80" height="18" uuid="5181c44b-e5da-459b-ac8f-cc0104b450e6"/>
+					<graphicElement>
+						<pen lineWidth="1.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+					</graphicElement>
+				</rectangle>
+				<textField>
+					<reportElement x="259" y="37" width="58" height="18" uuid="bd8485c0-f105-423f-9a2b-c1739a1583e5"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle"/>
+					<textFieldExpression><![CDATA[$F{pmDependentesInativos}]]></textFieldExpression>
+				</textField>
+				<rectangle>
+					<reportElement style="row-color-2" x="320" y="37" width="70" height="18" uuid="364e4b3c-f197-437f-942c-e1a56d3b7319"/>
+					<graphicElement>
+						<pen lineWidth="1.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+					</graphicElement>
+				</rectangle>
+				<textField>
+					<reportElement x="329" y="37" width="58" height="18" uuid="ca3e2c4b-45c5-460b-bca8-c780c05789bf"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle"/>
+					<textFieldExpression><![CDATA[$F{pmDependentesAtivos} + $F{pmDependentesInativos}]]></textFieldExpression>
+				</textField>
+				<rectangle>
+					<reportElement style="rect-header" x="0" y="55" width="80" height="36" uuid="b360d568-d976-457e-893e-2d18aa7bdfe0"/>
+					<graphicElement>
+						<pen lineWidth="1.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+					</graphicElement>
+				</rectangle>
+				<staticText>
+					<reportElement style="text-header" x="10" y="55" width="60" height="18" uuid="309b4b30-00a8-46ff-9b6a-c3d2582ae039"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<text><![CDATA[CBM]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement style="row-color-1" x="80" y="55" width="80" height="18" uuid="9f995167-ccf0-4700-910c-ac2bb3299b59"/>
+					<graphicElement>
+						<pen lineWidth="1.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+					</graphicElement>
+				</rectangle>
+				<staticText>
+					<reportElement x="83" y="55" width="60" height="18" uuid="568a9653-4e0b-496d-86ee-4f58122a035e"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle"/>
+					<text><![CDATA[TITULARES]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement style="row-color-1" x="160" y="55" width="80" height="18" uuid="4f089283-23bb-45df-a05f-eb7363ad7fd9"/>
+					<graphicElement>
+						<pen lineWidth="1.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+					</graphicElement>
+				</rectangle>
+				<textField>
+					<reportElement x="179" y="55" width="58" height="18" uuid="9efc99fb-a596-4e00-9cd8-632189b1a67d"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle"/>
+					<textFieldExpression><![CDATA[$F{cbmTitularesAtivos}]]></textFieldExpression>
+				</textField>
+				<rectangle>
+					<reportElement style="row-color-1" x="240" y="55" width="80" height="18" uuid="acb44db7-4a39-4290-9ab0-26aa59be458e"/>
+					<graphicElement>
+						<pen lineWidth="1.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+					</graphicElement>
+				</rectangle>
+				<textField>
+					<reportElement x="259" y="55" width="58" height="18" uuid="9efc99fb-a596-4e00-9cd8-632189b1a67d"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle"/>
+					<textFieldExpression><![CDATA[$F{cbmTitularesInativos}]]></textFieldExpression>
+				</textField>
+				<rectangle>
+					<reportElement style="row-color-1" x="320" y="55" width="70" height="18" uuid="8332ad8c-15bb-4739-b90c-84f014f3b4f7"/>
+					<graphicElement>
+						<pen lineWidth="1.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+					</graphicElement>
+				</rectangle>
+				<textField>
+					<reportElement x="329" y="55" width="58" height="18" uuid="9efc99fb-a596-4e00-9cd8-632189b1a67d"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle"/>
+					<textFieldExpression><![CDATA[$F{cbmTitularesAtivos} + $F{cbmTitularesInativos}]]></textFieldExpression>
+				</textField>
+				<rectangle>
+					<reportElement style="row-color-2" x="80" y="73" width="80" height="18" uuid="6a0b9bc5-5ff1-45d2-a5b7-1cc0a7901c3b"/>
+					<graphicElement>
+						<pen lineWidth="1.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+					</graphicElement>
+				</rectangle>
+				<staticText>
+					<reportElement x="83" y="73" width="76" height="18" uuid="85abca27-42c8-4611-9aa0-2dec6773b47d"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle"/>
+					<text><![CDATA[DEPENDENTES]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement style="row-color-2" x="160" y="73" width="80" height="18" uuid="ffbb5e33-5c5d-4f3c-b5df-508e779fd276"/>
+					<graphicElement>
+						<pen lineWidth="1.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+					</graphicElement>
+				</rectangle>
+				<textField>
+					<reportElement x="179" y="73" width="58" height="18" uuid="9efc99fb-a596-4e00-9cd8-632189b1a67d"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle"/>
+					<textFieldExpression><![CDATA[$F{cbmDependentesAtivos}]]></textFieldExpression>
+				</textField>
+				<rectangle>
+					<reportElement style="row-color-2" x="240" y="73" width="80" height="18" uuid="e08f2426-c62a-459b-a536-42f5e8fab5e8"/>
+					<graphicElement>
+						<pen lineWidth="1.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+					</graphicElement>
+				</rectangle>
+				<textField>
+					<reportElement x="259" y="73" width="58" height="18" uuid="9efc99fb-a596-4e00-9cd8-632189b1a67d"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle"/>
+					<textFieldExpression><![CDATA[$F{cbmDependentesInativos}]]></textFieldExpression>
+				</textField>
+				<rectangle>
+					<reportElement style="row-color-2" x="320" y="73" width="70" height="18" uuid="b0cc1746-b2a5-4f07-bab0-0a823d89748f"/>
+					<graphicElement>
+						<pen lineWidth="1.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+					</graphicElement>
+				</rectangle>
+				<textField>
+					<reportElement x="329" y="73" width="58" height="18" uuid="9efc99fb-a596-4e00-9cd8-632189b1a67d"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle"/>
+					<textFieldExpression><![CDATA[$F{cbmDependentesAtivos} + $F{cbmDependentesInativos}]]></textFieldExpression>
+				</textField>
+				<rectangle>
+					<reportElement style="rect-header" x="0" y="91" width="80" height="18" uuid="32e4141f-431c-42d9-907b-165b333c5906"/>
+					<graphicElement>
+						<pen lineWidth="1.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+					</graphicElement>
+				</rectangle>
+				<staticText>
+					<reportElement style="text-header" x="0" y="91" width="80" height="18" uuid="b73b0551-6681-44cc-b714-a63c44fa12b4"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<text><![CDATA[TOTAL GERAL]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement style="row-color-1" x="80" y="91" width="80" height="18" uuid="9f995167-ccf0-4700-910c-ac2bb3299b59"/>
+					<graphicElement>
+						<pen lineWidth="1.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+					</graphicElement>
+				</rectangle>
+				<rectangle>
+					<reportElement style="row-color-1" x="160" y="91" width="80" height="18" uuid="4f089283-23bb-45df-a05f-eb7363ad7fd9"/>
+					<graphicElement>
+						<pen lineWidth="1.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+					</graphicElement>
+				</rectangle>
+				<textField>
+					<reportElement style="text-totals" x="179" y="91" width="58" height="18" uuid="9efc99fb-a596-4e00-9cd8-632189b1a67d"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle"/>
+					<textFieldExpression><![CDATA[$F{pmTitularesAtivos} + $F{pmDependentesAtivos} + $F{cbmTitularesAtivos} + $F{cbmDependentesAtivos}]]></textFieldExpression>
+				</textField>
+				<rectangle>
+					<reportElement style="row-color-1" x="240" y="91" width="80" height="18" uuid="acb44db7-4a39-4290-9ab0-26aa59be458e"/>
+					<graphicElement>
+						<pen lineWidth="1.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+					</graphicElement>
+				</rectangle>
+				<textField>
+					<reportElement style="text-totals" x="259" y="91" width="58" height="18" uuid="9efc99fb-a596-4e00-9cd8-632189b1a67d"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle"/>
+					<textFieldExpression><![CDATA[$F{pmTitularesInativos} + $F{pmDependentesInativos} + $F{cbmTitularesInativos} + $F{cbmDependentesInativos}]]></textFieldExpression>
+				</textField>
+				<rectangle>
+					<reportElement style="row-color-1" x="320" y="91" width="70" height="18" uuid="8332ad8c-15bb-4739-b90c-84f014f3b4f7"/>
+					<graphicElement>
+						<pen lineWidth="1.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+					</graphicElement>
+				</rectangle>
+				<textField>
+					<reportElement style="text-totals" x="329" y="91" width="58" height="18" uuid="9efc99fb-a596-4e00-9cd8-632189b1a67d"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle"/>
+					<textFieldExpression><![CDATA[$F{pmTitularesAtivos} + $F{pmDependentesAtivos} + $F{cbmTitularesAtivos} + $F{cbmDependentesAtivos} + $F{pmTitularesInativos} + $F{pmDependentesInativos} + $F{cbmTitularesInativos} + $F{cbmDependentesInativos}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="0" y="115" width="390" height="21" uuid="646c5dc3-7871-45aa-a7a0-2eacc4e41e49"/>
+					<textElement textAlignment="Center">
+						<font size="10" isItalic="true"/>
+					</textElement>
+					<text><![CDATA[Tabela 1 Perfil dos casos positivos para COVID-19]]></text>
+				</staticText>
+			</frame>
+			<frame>
+				<reportElement x="130" y="397" width="298" height="176" uuid="8d73d514-64db-46e4-8785-40cefa217ce1"/>
+				<barChart>
+					<chart isShowLegend="false" evaluationTime="Report">
+						<reportElement x="0" y="0" width="298" height="150" uuid="15f3cd5d-0309-438b-8d1a-650fbca62372"/>
+						<chartTitle position="Top">
+							<font size="12" isBold="false" isItalic="false"/>
+							<titleExpression><![CDATA["Faixa Etária"]]></titleExpression>
+						</chartTitle>
+						<chartSubtitle/>
+						<chartLegend>
+							<font size="12"/>
+						</chartLegend>
+					</chart>
+					<categoryDataset>
+						<dataset resetType="Report">
+							<datasetRun subDataset="FaixaEtariaDataset" uuid="1810c1eb-88b9-4934-8e8f-bef3379a48aa">
+								<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{grupoFaixaEtaria})]]></dataSourceExpression>
+							</datasetRun>
+						</dataset>
+						<categorySeries>
+							<seriesExpression><![CDATA["Faixa Etária"]]></seriesExpression>
+							<categoryExpression><![CDATA[$F{faixaEtariaInicio} + ($F{faixaEtariaFim} != null ? " a " + $F{faixaEtariaFim} : "+")]]></categoryExpression>
+							<valueExpression><![CDATA[$F{numCasos}]]></valueExpression>
+						</categorySeries>
+					</categoryDataset>
+					<barPlot>
+						<plot>
+							<seriesColor seriesOrder="0" color="#4F81BD"/>
+						</plot>
+						<itemLabel/>
+						<categoryAxisFormat>
+							<axisFormat labelColor="#000000" tickLabelColor="#000000" axisLineColor="#000000">
+								<tickLabelFont>
+									<font size="8"/>
+								</tickLabelFont>
+							</axisFormat>
+						</categoryAxisFormat>
+						<valueAxisFormat>
+							<axisFormat labelColor="#000000" tickLabelColor="#000000" axisLineColor="#000000">
+								<labelFont/>
+								<tickLabelFont>
+									<font size="8"/>
+								</tickLabelFont>
+							</axisFormat>
+						</valueAxisFormat>
+					</barPlot>
+				</barChart>
+				<staticText>
+					<reportElement x="0" y="155" width="298" height="21" uuid="afedab7b-0a44-47df-bad7-c411302fb898"/>
+					<textElement textAlignment="Center">
+						<font size="10" isItalic="true"/>
+					</textElement>
+					<text><![CDATA[Figura 5 Gráfico por faixa etária]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="37" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="0" y="1" width="555" height="24" uuid="729c3539-f946-4d0e-a0a7-bda2815ea1b0"/>
+				<textField evaluationTime="Auto">
+					<reportElement x="513" y="0" width="40" height="20" uuid="4834e99c-7f6c-485a-b098-50e5187f2ab4"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA["3"]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</pageFooter>
+</jasperReport>

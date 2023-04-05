@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ResultadoExamesExternos" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="75ba35c3-31ff-4cd0-bdc6-bd02e2323b9e">
+	<parameter name="pessoa" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="imagem" class="java.net.URL" isForPrompting="false"/>
+	<parameter name="imagemDt" class="java.net.URL" isForPrompting="false"/>
+	<group name="Group1">
+		<groupHeader>
+			<band height="169">
+				<staticText>
+					<reportElement mode="Opaque" x="0" y="0" width="100" height="32" forecolor="#666666" backcolor="#E6E6E6" uuid="19074675-e557-47ad-b8fc-4d2e6115ef26"/>
+					<textElement>
+						<font size="12"/>
+					</textElement>
+					<text><![CDATA[G1Label]]></text>
+				</staticText>
+				<textField>
+					<reportElement mode="Opaque" x="100" y="0" width="455" height="32" forecolor="#006699" backcolor="#E6E6E6" uuid="18f214ac-a20c-460b-8202-1d167676d173"/>
+					<textElement>
+						<font size="24" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{pessoa}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement x="-20" y="32" width="595" height="1" forecolor="#666666" uuid="2c5a1117-2e16-41db-9407-ef4871583d2b"/>
+				</line>
+				<image>
+					<reportElement x="319" y="-18" width="133" height="50" uuid="2f2c0c6d-303f-45c5-be2f-54fde0946668"/>
+					<imageExpression><![CDATA[$P{imagem}]]></imageExpression>
+				</image>
+				<image>
+					<reportElement x="475" y="-17" width="100" height="50" uuid="d75c56a9-6591-4ce7-a8d6-af78cc490ea1"/>
+                     <imageExpression><![CDATA[$P{imagemDt}]]></imageExpression>
+				</image>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band/>
+		</groupFooter>
+	</group>
+</jasperReport>

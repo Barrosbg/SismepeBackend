@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="CadEstacionamento" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ccb7b170-4707-4336-869e-7c233b80f2a9">
+	<property name="ireport.background.image.properties" value="false,true,0.25,0,0,0,0,0,0"/>
+	<property name="ireport.zoom" value="1.4641000000000208"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Texts" fontName="SansSerif" fontSize="12" isBold="false"/>
+	<parameter name="nome" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="setor" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="placa" class="java.lang.String" isForPrompting="false"/>
+	<subDataset name="dataset1" uuid="0299c449-bb10-4dc2-b5bd-fb73dfeec2b0"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="249">
+			<rectangle radius="11">
+							<reportElement x="126" y="21" width="158" height="204" uuid="1ee80795-8df8-4794-b43f-e765d2f9c6bc"/>
+						</rectangle>
+						<staticText>
+							<reportElement x="137" y="59" width="34" height="17" uuid="167adcb9-56ff-4d4c-92a5-ebd46de45c3a"/>
+							<text><![CDATA[Nome:]]></text>
+						</staticText>
+						<staticText>
+							<reportElement x="137" y="87" width="34" height="17" uuid="0d80eb27-ab12-444c-8906-9716af47a302"/>
+							<text><![CDATA[Setor:]]></text>
+						</staticText>
+						<staticText>
+							<reportElement x="137" y="117" width="34" height="17" uuid="0bb27b27-c1e5-47c6-aa77-9ee14434fbee"/>
+							<text><![CDATA[Placa:]]></text>
+						</staticText>
+						<textField>
+							<reportElement x="171" y="59" width="102" height="17" uuid="04891aa2-7c7c-4f02-ba55-ade592127899"/>
+							<textFieldExpression><![CDATA[$P{nome}]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="171" y="87" width="102" height="17" uuid="2940def9-7a9d-4a25-ae6b-a2c8b15868ed"/>
+							<textFieldExpression><![CDATA[$P{setor}]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="171" y="117" width="102" height="17" uuid="f6a7849a-da29-4ebe-a071-07adef0abfd3"/>
+							<textFieldExpression><![CDATA[$P{placa}]]></textFieldExpression>
+						</textField>
+		</band>
+	</detail>
+</jasperReport>

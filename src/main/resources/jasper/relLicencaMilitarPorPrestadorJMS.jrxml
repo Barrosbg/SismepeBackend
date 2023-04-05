@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="relLicencasPaciente" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ccb7b170-4707-4336-869e-7c233b80f2a9">
+	<property name="ireport.background.image.properties" value="false,true,0.25,0,0,0,0,0,0"/>
+	<property name="ireport.zoom" value="1.9487171000000276"/>
+	<property name="ireport.x" value="879"/>
+	<property name="ireport.y" value="120"/>
+	<style name="Texts" fontName="SansSerif" fontSize="12" isBold="false"/>
+	<parameter name="JMS" class="java.net.URL" isForPrompting="false"/>
+	<parameter name="totalLic" class="java.lang.Long" isForPrompting="false"/>
+	<field name="codigo" class="java.lang.Long"/>
+	<field name="conselho" class="java.lang.String"/>
+	<field name="nomePrestador" class="java.lang.String"/>
+	<field name="matriculaPaciente" class="java.lang.Integer"/>
+	<field name="nomePaciente" class="java.lang.String"/>
+	<field name="dataInicio" class="java.util.Date"/>
+	<field name="qtdDias" class="java.lang.Integer"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="75" splitType="Stretch">
+			<image>
+				<reportElement x="12" y="7" width="400" height="41" uuid="a5241716-240a-4014-bb70-0a063e1bd5c2"/>
+				<imageExpression><![CDATA[$P{JMS}]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="189" y="47" width="453" height="21" uuid="df01a007-ffc5-4ecf-87ad-5b5098e132b5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[RELATÓRIO DE LICENÇA/DISPENSA]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy HH.mm.ss">
+				<reportElement x="702" y="7" width="100" height="20" uuid="80a95de0-3f4c-4963-b251-229df0823d91"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="28" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="5" width="802" height="22" backcolor="#C0C0C0" uuid="04f06baf-a16a-4eef-942a-0eb8e021f5f0"/>
+				<graphicElement>
+					<pen lineWidth="0.0"/>
+				</graphicElement>
+			</rectangle>
+			<line>
+				<reportElement x="0" y="4" width="802" height="1" uuid="782e8c3a-ead8-4a22-8344-0d1b00b85505"/>
+			</line>
+			<line>
+				<reportElement x="0" y="27" width="802" height="1" uuid="62c8fa94-592a-4004-8f03-e36b1bd6e830"/>
+			</line>
+			<staticText>
+				<reportElement x="12" y="6" width="98" height="20" uuid="b5047e07-c51b-4f4a-8d57-42511c2c40fd"/>
+				<textElement verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Licenças/Dispensas]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="110" y="6" width="68" height="20" uuid="979a8fab-8e43-46f3-b3e2-409c4414f413"/>
+				<textElement verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Conselho]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="178" y="6" width="192" height="20" uuid="a85f0e76-5b92-41a4-9d92-26e2487b34a0"/>
+				<textElement verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Prestador]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="370" y="6" width="74" height="20" uuid="f2a556ce-9030-43c9-89e8-4b7e66b23ea7"/>
+				<textElement verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Matrícula]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="444" y="7" width="204" height="20" uuid="e3cb594b-3df9-49b4-bb50-5944e8802da9"/>
+				<textElement verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Paciente]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="653" y="6" width="74" height="20" uuid="f2f04e84-b2fc-45d8-b33f-85d7ca24d568"/>
+				<textElement verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Início]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="725" y="6" width="74" height="20" uuid="595df41d-2bae-476e-9153-5794d5a4e69d"/>
+				<textElement verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Dias]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="21" splitType="Stretch">
+			<textField>
+				<reportElement x="12" y="0" width="98" height="20" uuid="98ec2749-0a6d-48d8-9ae0-9894b796fe7e"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{codigo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="178" y="1" width="192" height="20" uuid="381bd137-eba6-437a-b991-d3d7a312e7a6"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nomePrestador}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="19" width="802" height="1" uuid="52ca19b7-c69d-453c-9ca0-28b8c4b147b7"/>
+			</line>
+			<textField>
+				<reportElement x="110" y="0" width="68" height="20" uuid="ac95b3a0-23fb-42a2-9b3b-80490fc66e12"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{conselho}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="371" y="1" width="72" height="20" uuid="b012f097-f511-4e2a-933c-3a1b6ee2401b"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{matriculaPaciente}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="444" y="1" width="204" height="20" uuid="4c616ba0-d9c3-43ef-9b12-fe42a95c5aab"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nomePaciente}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="727" y="1" width="72" height="20" uuid="21278328-d4c4-4256-a8f6-3b7896c6fcfa"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{qtdDias}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="648" y="1" width="72" height="20" uuid="fad8d426-6a61-4def-b45e-0c8cab8aa550"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{dataInicio}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="32" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="48" splitType="Stretch">
+			<textField>
+				<reportElement x="374" y="5" width="80" height="20" uuid="38870314-3f33-4bdc-b492-7992af55a432"/>
+				<textElement textAlignment="Right">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Página "+$V{PAGE_NUMBER}+" de"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="454" y="5" width="40" height="20" uuid="5535fc78-9865-443f-adef-5f3f301580f2"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="261" splitType="Stretch">
+			<rectangle>
+				<reportElement x="715" y="44" width="87" height="20" uuid="a64cad3d-c0ba-43aa-a367-9643a896b1a6"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="570" y="44" width="145" height="20" backcolor="#C0C0C0" uuid="cd4023fa-8512-448a-8ef7-96978d3c35f5"/>
+			</rectangle>
+			<textField>
+				<reportElement x="720" y="44" width="79" height="20" uuid="56bcffac-ca3d-401c-be14-1911a754f691"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{totalLic}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="574" y="44" width="141" height="20" uuid="3f2b8793-4cac-4c51-9fd1-37eb9b83e0e3"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[TOTAL Licenças/Dispensas:]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>

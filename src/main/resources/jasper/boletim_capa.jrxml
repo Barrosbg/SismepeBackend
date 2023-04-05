@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Boletim Capa" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="c50b24eb-eb33-413f-8e75-e7e20a5341fd">
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="158"/>
+	<style name="Main_font" fontName="SansSerif"/>
+	<parameter name="TituloBoletim" class="java.lang.String">
+		<defaultValueExpression><![CDATA["BOLETIM"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="SubtituloBoletim" class="java.lang.String">
+		<defaultValueExpression><![CDATA["COVID-19"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="CAPA_IMAGEM_CIMA" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="CAPA_IMAGEM_BAIXO" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="LOGO" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="DATA_BOLETIM" class="java.util.Date" isForPrompting="false"/>
+	<title>
+		<band height="842" splitType="Stretch">
+			<image>
+				<reportElement x="0" y="0" width="595" height="451" uuid="09298aec-1980-46fd-9c84-c808a60ed34a"/>
+				<imageExpression><![CDATA[$P{CAPA_IMAGEM_CIMA}]]></imageExpression>
+			</image>
+			<image scaleImage="FillFrame">
+				<reportElement x="0" y="561" width="595" height="281" uuid="7d5f399a-cbec-48b3-979b-064c0b477ca2">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<imageExpression><![CDATA[$P{CAPA_IMAGEM_BAIXO}]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement style="Main_font" positionType="Float" x="30" y="312" width="534" height="54" forecolor="#FFFFFF" uuid="5bb49d37-ea51-4ca3-a18a-38cb0e66e0ee"/>
+				<box leftPadding="20" rightPadding="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font size="38" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{TituloBoletim}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Main_font" positionType="Float" x="30" y="368" width="534" height="80" forecolor="#FFFFFF" uuid="7f58d454-cae0-4ebb-9ccd-c885124eb525"/>
+				<box leftPadding="20" rightPadding="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font size="62" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{SubtituloBoletim}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement style="Main_font" x="0" y="561" width="595" height="50" forecolor="#FFFFFF" uuid="38fc9afd-edcb-42f3-b6bc-cd258f6507b3"/>
+				<textElement textAlignment="Center">
+					<font size="24" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{DATA_BOLETIM}]]></textFieldExpression>
+			</textField>
+			<image hAlign="Center" vAlign="Middle">
+				<reportElement x="143" y="451" width="309" height="110" uuid="b4affea1-9e34-4e6d-8e45-d88f1d3bced7"/>
+				<imageExpression><![CDATA[$P{LOGO}]]></imageExpression>
+			</image>
+			<textField pattern="HH:mm">
+				<reportElement style="Main_font" x="0" y="611" width="595" height="50" forecolor="#FFFFFF" uuid="aa73dbf9-567d-4e85-bdfc-3443b068c925"/>
+				<textElement textAlignment="Center">
+					<font size="24" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{DATA_BOLETIM}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+</jasperReport>

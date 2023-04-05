@@ -1,0 +1,41 @@
+package br.gov.pe.sismepe.dto.covid;
+
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
+
+public class AltaInternacaoDTO implements Serializable {
+	
+	private static final long serialVersionUID = 8274837680866447279L;
+	private String descricao;
+	private String cor;
+	private List<Integer> quantitavivos;
+	
+	public AltaInternacaoDTO() {
+		this.quantitavivos = new ArrayList<Integer>();
+	}
+	
+	public String getCor() {
+		return cor;
+	}
+
+	public void setCor(String cor) {
+		this.cor = cor;
+	}
+
+	public List<Integer> getQuantitavivos() {
+		return quantitavivos;
+	}
+
+	public void setQuantitavivos(List<Integer> quantitavivos) {
+		this.quantitavivos = quantitavivos;
+	}
+
+	public String getDescricao() {
+		return descricao;
+	}
+
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
+	}
+}
